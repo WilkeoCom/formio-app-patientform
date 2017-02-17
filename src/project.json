@@ -1758,8 +1758,8 @@
                 "prefix":"",
                 "placeholder":"",
                 "key":"phoneNumber",
-                "label":"Phone number",
-                "inputMask":"(999) 999-99-99-99",
+                "label":"Téléphone",
+                "inputMask":"(+99) 9-99-99-99-99",
                 "tableView":true,
                 "input":true,
                 "isNew":false
