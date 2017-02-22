@@ -339,6 +339,143 @@
         "type": "delete_own",
         "roles": []
       }]
+    },
+    "womacIndex" :{
+      "title":"Indice WOMAC",
+      "type":"form",
+      "name":"womacIndex",
+      "path":"womacindex",      
+      "display": "form",        
+      "tags": ["patient"],
+      "components":[
+        {
+          "input":true,
+          "tableView":true,
+          "label":"Patient",
+          "key":"patient",
+          "placeholder":"",
+          "resource":"patient",
+          "project":"",
+          "defaultValue":"",
+          "template":"<span>{{ item.data }}</span>",
+          "selectFields":"",
+          "searchFields":"",
+          "multiple":false,
+          "protected":false,
+          "persistent":true,
+          "validate":{
+            "required":true
+          },
+          "defaultPermission":"",
+          "type":"resource"
+        },
+        {
+          "input":true,
+          "tableView":true,
+          "label":"Domaine douleur : quelle est l'importance de la douleur ?",
+          "key":"womacPain",
+          "questions":[
+            {
+              "value":"marcherSurfacePlane",
+              "label":"1. Lorsque vous marchez sur une surface plane ?"
+            },
+            {
+              "value":"monterDescendreEscalier",
+              "label":"2. Lorsque vous montez et descendez les escaliers ?"
+            },
+            {
+              "value":"nuitLit",
+              "label":"3. La nuit, lorsque vous êtes au lit ?"
+            },
+            {
+              "value":"leverAssisChaise",
+              "label":"4. Lorsque vous vous levez d'une chaise ou vous vous asseyez ?"
+            },
+            {
+              "value":"debout",
+              "label":"5. Lorsque vous vous tenez debout ?"
+            }
+          ],
+          "values":[
+            {
+              "value":"0",
+              "label":"Aucun"
+            },
+            {
+              "value":"1",
+              "label":"Minime"
+            },
+            {
+              "value":"2",
+              "label":"Modéré"
+            },
+            {
+              "value":"3",
+              "label":"Sévère"
+            },
+            {
+              "value":"4",
+              "label":"Très sévère"
+            }
+          ],
+          "defaultValue":"",
+          "protected":false,
+          "persistent":true,
+          "validate":{
+            "required":true,
+            "custom":"",
+            "customPrivate":false
+          },
+          "type":"survey",
+          "tags":[
+
+          ],
+          "conditional":{
+            "show":"",
+            "when":null,
+            "eq":""
+          },
+          "lockKey":true
+        },
+        {
+          "input":true,
+          "label":"Submit",
+          "tableView":false,
+          "key":"submit",
+          "size":"md",
+          "leftIcon":"",
+          "rightIcon":"",
+          "block":false,
+          "action":"submit",
+          "disableOnInvalid":false,
+          "theme":"primary",
+          "type":"button"
+        }
+      ],
+      "submissionAccess":[
+        {
+          "type":"create_own",
+          "roles":[]
+        },
+        {
+          "type":"read_own",
+          "roles":[]
+        },
+        {
+          "type":"update_own",
+          "roles":[]
+        },
+        {
+          "type":"delete_own",
+          "roles":[]
+        }
+      ],
+      "access":[
+        {
+          "type":"read_all",
+          "roles":["administrator"]
+        }
+      ]
     }
   },
   "actions": {
