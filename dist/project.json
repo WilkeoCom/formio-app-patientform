@@ -1,10 +1,10 @@
 {
-  "title": "Service Tracker",
+  "title": "Patient Forms",
   "version": "2.0.1",
-  "description": "The Service Tracker Application.",
+  "description": "L'application des formulaires patient.",
   "preview": {
     "url": "https://formio.github.io/formio-app-servicetracker",
-    "repo": "https://github.com/formio/formio-app-servicetracker"
+    "repo": "https://github.com/WilkeoCom/formio-app-patientform"
   },
   "roles": {
     "administrator": {
@@ -1636,6 +1636,286 @@
       }, {
         "type": "delete_own",
         "roles": []
+      }]
+    },
+    "patient": {
+      "title": "Patient",
+      "type": "resource",
+      "name": "patient",
+      "path": "patient",
+      "display": "form",
+      "tags": ["common"],
+      "components":[{
+        "input":false,
+        "key":"columns1",
+        "columns":[{
+            "components":[
+              {
+                "tags":[],
+                "type":"textfield",
+                "conditional":{
+                  "eq":"",
+                  "when":null,
+                  "show":""
+                },
+                "validate":{
+                  "customPrivate":false,
+                  "custom":"",
+                  "pattern":"",
+                  "maxLength":"",
+                  "minLength":"",
+                  "required":true
+                },
+                "persistent":true,
+                "unique":false,
+                "protected":false,
+                "defaultValue":"",
+                "multiple":false,
+                "suffix":"",
+                "prefix":"",
+                "placeholder":"Entrez la prénom du patient",
+                "key":"firstName",
+                "label":"Prénom",
+                "inputMask":"",
+                "inputType":"text",
+                "tableView":true,
+                "input":true
+              },
+              {
+                "tags":[],
+                "type":"textfield",
+                "conditional":{
+                  "eq":"",
+                  "when":null,
+                  "show":""
+                },
+                "validate":{
+                  "customPrivate":false,
+                  "custom":"",
+                  "pattern":"",
+                  "maxLength":"",
+                  "minLength":"",
+                  "required":true
+                },
+                "persistent":true,
+                "unique":false,
+                "protected":false,
+                "defaultValue":"",
+                "multiple":false,
+                "suffix":"",
+                "prefix":"",
+                "placeholder":"Entez le nom du patient",
+                "key":"lastName",
+                "label":"Nom",
+                "inputMask":"",
+                "inputType":"text",
+                "tableView":true,
+                "input":true
+              },
+              {
+                "conditional":{
+                  "eq":"",
+                  "when":null,
+                  "show":""
+                },
+                "tags":[],
+                "type":"email",
+                "kickbox":{
+                  "enabled":false
+                },
+                "persistent":true,
+                "unique":false,
+                "protected":false,
+                "defaultValue":"",
+                "suffix":"",
+                "prefix":"",
+                "placeholder":"",
+                "key":"email",
+                "label":"Email",
+                "inputType":"email",
+                "tableView":true,
+                "input":true,
+                "isNew":false
+              },
+              {
+                "lockKey":true,
+                "conditional":{
+                  "eq":"",
+                  "when":null,
+                  "show":""
+                },
+                "tags":[],
+                "type":"phoneNumber",
+                "validate":{
+                  "required":false
+                },
+                "defaultValue":"",
+                "persistent":true,
+                "unique":false,
+                "protected":false,
+                "multiple":false,
+                "suffix":"",
+                "prefix":"",
+                "placeholder":"",
+                "key":"phoneNumber",
+                "label":"Téléphone",
+                "inputMask":"(+99) 9-99-99-99-99",
+                "tableView":true,
+                "input":true,
+                "isNew":false
+              }
+            ]
+          },
+          {
+            "components":[
+              {
+                "conditional":{
+                  "eq":"",
+                  "when":null,
+                  "show":""
+                },
+                "tags":[],
+                "type":"day",
+                "validate":{
+                  "custom":""
+                },
+                "persistent":true,
+                "protected":false,
+                "dayFirst":true,
+                "fields":{
+                  "year":{
+                    "required":true,
+                    "placeholder":"année",
+                    "type":"text"
+                  },
+                  "month":{
+                    "required":true,
+                    "placeholder":"mois",
+                    "type":"select"
+                  },
+                  "day":{
+                    "required":true,
+                    "placeholder":"jour",
+                    "type":"text"
+                  }
+                },
+                "key":"birthdate",
+                "label":"Date de naissance",
+                "tableView":true,
+                "input":true,
+                "isNew":false
+              },
+              {
+                "conditional":{
+                  "eq":"",
+                  "when":null,
+                  "show":""
+                },
+                "tags":[],
+                "type":"number",
+                "validate":{
+                  "custom":"",
+                  "multiple":"",
+                  "integer":"",
+                  "step":"any",
+                  "max":"",
+                  "min":1,
+                  "required":true
+                },
+                "persistent":true,
+                "protected":false,
+                "defaultValue":"",
+                "suffix":"",
+                "prefix":"",
+                "placeholder":"taille en cm",
+                "key":"height",
+                "label":"Taille",
+                "inputType":"number",
+                "tableView":true,
+                "input":true
+              },
+              {
+                "conditional":{
+                  "eq":"",
+                  "when":null,
+                  "show":""
+                },
+                "tags":[],
+                "type":"number",
+                "validate":{
+                  "custom":"",
+                  "multiple":"",
+                  "integer":"",
+                  "step":"any",
+                  "max":"",
+                  "min":1,
+                  "required":true
+                },
+                "persistent":true,
+                "protected":false,
+                "defaultValue":"",
+                "suffix":"",
+                "prefix":"",
+                "placeholder":"",
+                "key":"weight",
+                "label":"Poids",
+                "inputType":"number",
+                "tableView":true,
+                "input":true
+              }
+            ]
+          }
+        ],
+        "type":"columns",
+        "tags":[],
+        "conditional":{
+          "show":"",
+          "when":null,
+          "eq":""
+        }
+      },
+      {
+        "type":"button",
+        "theme":"primary",
+        "disableOnInvalid":false,
+        "action":"submit",
+        "block":false,
+        "rightIcon":"",
+        "leftIcon":"",
+        "size":"md",
+        "key":"submit",
+        "tableView":false,
+        "label":"Submit",
+        "input":true
+      }],
+      "access": [{
+        "type": "read_all",
+        "roles": ["administrator", "contractor", "anonymous", "dealer"]
+      }],
+      "submissionAccess": [{
+        "type": "create_all",
+        "roles": []
+      }, {
+        "type": "read_all",
+        "roles": ["administrator"]
+      }, {
+        "type": "update_all",
+        "roles": ["administrator"]
+      }, {
+        "type": "delete_all",
+        "roles": ["administrator"]
+      }, {
+        "type": "create_own",
+        "roles": ["administrator"]
+      }, {
+        "type": "read_own",
+        "roles": ["administrator"]
+      }, {
+        "type": "update_own",
+        "roles": ["administrator"]
+      }, {
+        "type": "delete_own",
+        "roles": ["administrator"]
       }]
     }
   }
