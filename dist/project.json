@@ -1090,7 +1090,7 @@
           "tableView": true,
           "inputType": "radio",
           "label": "Quel est le plus haut niveau d’activité que vous pouvez accomplir sans que votre genou ne se dérobe ?",
-          "key": "activityHighestLevel",
+          "key": "activityHighestLevelWithoutHiding",
           "values": [
             {
               "value": "veryIntenseActivities",
@@ -1134,7 +1134,7 @@
           "tableView": true,
           "inputType": "radio",
           "label": "Quel est le plus haut niveau d’activité que vous pouvez pratiquer régulièrement ?",
-          "key": "quelestleplushautniveaudactivitquevouspouvezpratiquerrgulirement",
+          "key": "activityHighestLevelPractice ",
           "values": [
             {
               "value": "activitesTresIntensesComportantSautsEtRotationsCommeAuBasketOuAuFootball",
