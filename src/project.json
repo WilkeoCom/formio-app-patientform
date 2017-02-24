@@ -742,6 +742,477 @@
           ]
         }
       ]
+    },
+    "ikdc": {
+      "title": "IKDS",
+      "type": "form",
+      "name": "ikds",
+      "path": "ikds",
+      "tags": [
+        "patient"
+      ],
+      "components": [
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "day",
+          "validate": {
+            "custom": ""
+          },
+          "persistent": true,
+          "protected": false,
+          "dayFirst": true,
+          "fields": {
+            "year": {
+              "required": false,
+              "placeholder": "Année",
+              "type": "text"
+            },
+            "month": {
+              "required": false,
+              "placeholder": "Mois",
+              "type": "select"
+            },
+            "day": {
+              "required": false,
+              "placeholder": "Jour",
+              "type": "text"
+            }
+          },
+          "key": "accidentDate",
+          "label": "Date de l'accident ou blessure",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "radio",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football",
+              "value": "veryIntenseActivity"
+            },
+            {
+              "label": "Activités intenses comme un travail physique dur, le ski ou le tennis",
+              "value": "intenseActivity"
+            },
+            {
+              "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging",
+              "value": "moderateActivity"
+            },
+            {
+              "label": "Activités douces comme la marche, le ménage ou le jardinage",
+              "value": "softActivities"
+            },
+            {
+              "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou",
+              "value": "noActivities"
+            }
+          ],
+          "key": "activityLevelWithoutSuffering",
+          "label": "Quel est le niveau d’activité le plus important que vous pouvez accomplir sans souffrir du genou ?",
+          "inputType": "radio",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "inline": true,
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "radio",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "0 Jamais",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10 Constamment",
+              "value": "10"
+            }
+          ],
+          "key": "howManyTimesSuffered",
+          "label": "Au cours des 4 dernières semaines, ou depuis votre accident ou blessure, combien de fois avez-vous souffert du genou ? Cochez la case correspondante (de 0 à 10) :",
+          "inputType": "radio",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "inline": true,
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "radio",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "0 Aucune imaginable douleur",
+              "value": "0"
+            },
+            {
+              "label": "1",
+              "value": "1"
+            },
+            {
+              "label": "2",
+              "value": "2"
+            },
+            {
+              "label": "3",
+              "value": "3"
+            },
+            {
+              "label": "4",
+              "value": "4"
+            },
+            {
+              "label": "5",
+              "value": "5"
+            },
+            {
+              "label": "6",
+              "value": "6"
+            },
+            {
+              "label": "7",
+              "value": "7"
+            },
+            {
+              "label": "8",
+              "value": "8"
+            },
+            {
+              "label": "9",
+              "value": "9"
+            },
+            {
+              "label": "10 La pire douleur",
+              "value": "10"
+            }
+          ],
+          "key": "painIntensity",
+          "label": "Indiquez l’intensité de la douleur en cochant la case correspondante (de 0 à 10) :",
+          "inputType": "radio",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "inline": true,
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "radio",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "Pas du tout",
+              "value": "none"
+            },
+            {
+              "label": "Un peu",
+              "value": "aLittle"
+            },
+            {
+              "label": "Moyennement",
+              "value": "moderately"
+            },
+            {
+              "label": "Beaucoup",
+              "value": "aLot"
+            },
+            {
+              "label": "Enormément",
+              "value": "verryMuch"
+            }
+          ],
+          "key": "stiffOrSwollen",
+          "label": "Au cours des 4 dernières semaines, ou depuis l’accident ou blessure, votre genou était-il raide ou gonflé ?",
+          "inputType": "radio",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "radio",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football",
+              "value": "veryIntenseActivities"
+            },
+            {
+              "label": "Activités intenses comme un travail physique dur, le ski ou le tennis",
+              "value": "intenseActivities"
+            },
+            {
+              "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging",
+              "value": "moderateActivities"
+            },
+            {
+              "label": "Activités douces comme la marche, le ménage ou le jardinage",
+              "value": "softActivities"
+            },
+            {
+              "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou",
+              "value": "none"
+            }
+          ],
+          "key": "activityLevelWithoutSwelling",
+          "label": "Quel est le plus haut niveau d’activité que vous pouvez accomplir sans que votre genou enfle ?",
+          "inputType": "radio",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "inline": true,
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "radio",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "Oui",
+              "value": "yes"
+            },
+            {
+              "label": "Non",
+              "value": "no"
+            }
+          ],
+          "key": "hasKneeStuck",
+          "label": "Au cours des 4 dernières semaines, ou depuis l’accident ou blessure, votre genou s’est-il bloqué ?",
+          "inputType": "radio",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "inputType": "radio",
+          "label": "Quel est le plus haut niveau d’activité que vous pouvez accomplir sans que votre genou ne se dérobe ?",
+          "key": "activityHighestLevel",
+          "values": [
+            {
+              "value": "veryIntenseActivities",
+              "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football"
+            },
+            {
+              "value": "intenseActivities",
+              "label": "Activités intenses comme un travail physique dur, le ski ou le tennis"
+            },
+            {
+              "value": "moderateActivities",
+              "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging"
+            },
+            {
+              "value": "softActivities",
+              "label": "Activités douces comme la marche, le ménage ou le jardinage"
+            },
+            {
+              "value": "None",
+              "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou"
+            }
+          ],
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": true,
+            "custom": "",
+            "customPrivate": false
+          },
+          "type": "radio",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "inline": false
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "inputType": "radio",
+          "label": "Quel est le plus haut niveau d’activité que vous pouvez pratiquer régulièrement ?",
+          "key": "quelestleplushautniveaudactivitquevouspouvezpratiquerrgulirement",
+          "values": [
+            {
+              "value": "activitesTresIntensesComportantSautsEtRotationsCommeAuBasketOuAuFootball",
+              "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football"
+            },
+            {
+              "value": "activitesIntensesCommeUnTravailPhysiqueDurLeSkiOuLeTennis",
+              "label": "Activités intenses comme un travail physique dur, le ski ou le tennis"
+            },
+            {
+              "value": "activitesModereesCommeUnTravailPhysiqueMoyenLaCourseAPiedOuLeJogging",
+              "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging"
+            },
+            {
+              "value": "activitesDoucesCommeLaMarcheLeMenageOuLeJardinage",
+              "label": "Activités douces comme la marche, le ménage ou le jardinage"
+            },
+            {
+              "value": "None",
+              "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou"
+            }
+          ],
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": false,
+            "custom": "",
+            "customPrivate": false
+          },
+          "type": "radio",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "type": "button",
+          "theme": "primary",
+          "disableOnInvalid": false,
+          "action": "submit",
+          "block": false,
+          "rightIcon": "",
+          "leftIcon": "",
+          "size": "md",
+          "key": "submit",
+          "tableView": false,
+          "label": "Submit",
+          "input": true
+        }
+      ],
+      "submissionAccess": [
+        {
+          "type": "create_own",
+          "roles": []
+        },
+        {
+          "type": "read_own",
+          "roles": []
+        },
+        {
+          "type": "update_own",
+          "roles": []
+        },
+        {
+          "type": "delete_own",
+          "roles": []
+        }
+      ],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator"
+          ]
+        }
+      ]
     }
   },
   "actions": {
