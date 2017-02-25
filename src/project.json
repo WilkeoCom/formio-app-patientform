@@ -473,7 +473,6 @@
           "type": "resource"
         },
         {
-          "lockKey": true,
           "conditional": {
             "eq": "",
             "when": null,
@@ -788,6 +787,26 @@
           "input": true
         },
         {
+          "key": "symptomsTitle",
+          "input": false,
+          "tag": "h2",
+          "attrs": [
+            {
+              "value": "",
+              "attr": ""
+            }
+          ],
+          "className": "",
+          "content": "SYMPTÔMES",
+          "type": "htmlelement",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
           "conditional": {
             "eq": "",
             "when": null,
@@ -831,140 +850,163 @@
           "input": true
         },
         {
-          "inline": true,
-          "conditional": {
-            "eq": "",
-            "when": null,
-            "show": ""
+          "input": true,
+          "tableView": true,
+          "label": "Au cours des 4 dernières semaines, ou depuis votre accident ou blessure, combien de fois avez-vous souffert du genou ? Cochez la case correspondante (de 0 à 10) :",
+          "key": "howManyTimesSuffered",
+          "placeholder": "",
+          "data": {
+            "values": [
+              {
+                "value": "0",
+                "label": "0 Jamais"
+              },
+              {
+                "value": "1",
+                "label": "1"
+              },
+              {
+                "value": "2",
+                "label": "2"
+              },
+              {
+                "value": "3",
+                "label": "3"
+              },
+              {
+                "value": "4",
+                "label": "4"
+              },
+              {
+                "value": "5",
+                "label": "5"
+              },
+              {
+                "value": "6",
+                "label": "6"
+              },
+              {
+                "value": "7",
+                "label": "7"
+              },
+              {
+                "value": "8",
+                "label": "8"
+              },
+              {
+                "value": "9",
+                "label": "9"
+              },
+              {
+                "value": "10",
+                "label": "10 Constamment"
+              }
+            ],
+            "json": "",
+            "url": "",
+            "resource": "",
+            "custom": ""
           },
-          "type": "radio",
+          "dataSrc": "values",
+          "valueProperty": "",
+          "defaultValue": "",
+          "refreshOn": "",
+          "filter": "",
+          "authenticate": false,
+          "template": "<span>{{ item.label }}</span>",
+          "multiple": false,
+          "protected": false,
+          "unique": false,
+          "persistent": true,
           "validate": {
-            "customPrivate": false,
-            "custom": "",
             "required": true
           },
-          "persistent": true,
-          "protected": false,
-          "defaultValue": "",
-          "values": [
-            {
-              "label": "0 Jamais",
-              "value": "0"
-            },
-            {
-              "label": "1",
-              "value": "1"
-            },
-            {
-              "label": "2",
-              "value": "2"
-            },
-            {
-              "label": "3",
-              "value": "3"
-            },
-            {
-              "label": "4",
-              "value": "4"
-            },
-            {
-              "label": "5",
-              "value": "5"
-            },
-            {
-              "label": "6",
-              "value": "6"
-            },
-            {
-              "label": "7",
-              "value": "7"
-            },
-            {
-              "label": "8",
-              "value": "8"
-            },
-            {
-              "label": "9",
-              "value": "9"
-            },
-            {
-              "label": "10 Constamment",
-              "value": "10"
-            }
-          ],
-          "key": "howManyTimesSuffered",
-          "label": "Au cours des 4 dernières semaines, ou depuis votre accident ou blessure, combien de fois avez-vous souffert du genou ? Cochez la case correspondante (de 0 à 10) :",
-          "inputType": "radio",
-          "tableView": true,
-          "input": true
+          "type": "select",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
         },
         {
-          "inline": true,
           "conditional": {
             "eq": "",
             "when": null,
             "show": ""
           },
-          "type": "radio",
+          "type": "select",
           "validate": {
-            "customPrivate": false,
-            "custom": "",
             "required": true
           },
           "persistent": true,
+          "unique": false,
           "protected": false,
+          "multiple": false,
+          "template": "<span>{{ item.label }}</span>",
+          "authenticate": false,
+          "filter": "",
+          "refreshOn": "",
           "defaultValue": "",
-          "values": [
-            {
-              "label": "0 Aucune imaginable douleur",
-              "value": "0"
-            },
-            {
-              "label": "1",
-              "value": "1"
-            },
-            {
-              "label": "2",
-              "value": "2"
-            },
-            {
-              "label": "3",
-              "value": "3"
-            },
-            {
-              "label": "4",
-              "value": "4"
-            },
-            {
-              "label": "5",
-              "value": "5"
-            },
-            {
-              "label": "6",
-              "value": "6"
-            },
-            {
-              "label": "7",
-              "value": "7"
-            },
-            {
-              "label": "8",
-              "value": "8"
-            },
-            {
-              "label": "9",
-              "value": "9"
-            },
-            {
-              "label": "10 La pire douleur",
-              "value": "10"
-            }
-          ],
+          "valueProperty": "",
+          "dataSrc": "values",
+          "data": {
+            "custom": "",
+            "resource": "",
+            "url": "",
+            "json": "",
+            "values": [
+              {
+                "label": "0 Aucune imaginable douleur",
+                "value": "0"
+              },
+              {
+                "label": "1",
+                "value": "1"
+              },
+              {
+                "label": "2",
+                "value": "2"
+              },
+              {
+                "label": "3",
+                "value": "3"
+              },
+              {
+                "label": "4",
+                "value": "4"
+              },
+              {
+                "label": "5",
+                "value": "5"
+              },
+              {
+                "label": "6",
+                "value": "6"
+              },
+              {
+                "label": "7",
+                "value": "7"
+              },
+              {
+                "label": "8",
+                "value": "8"
+              },
+              {
+                "label": "9",
+                "value": "9"
+              },
+              {
+                "label": "10 La pire douleur",
+                "value": "10"
+              }
+            ]
+          },
+          "placeholder": "",
           "key": "painIntensity",
           "label": "Indiquez l’intensité de la douleur en cochant la case correspondante (de 0 à 10) :",
-          "inputType": "radio",
           "tableView": true,
-          "input": true
+          "input": true,
+          "isNew": false
         },
         {
           "inline": true,
@@ -1008,7 +1050,8 @@
           "label": "Au cours des 4 dernières semaines, ou depuis l’accident ou blessure, votre genou était-il raide ou gonflé ?",
           "inputType": "radio",
           "tableView": true,
-          "input": true
+          "input": true,
+          "isNew": false
         },
         {
           "conditional": {
@@ -1051,7 +1094,8 @@
           "label": "Quel est le plus haut niveau d’activité que vous pouvez accomplir sans que votre genou enfle ?",
           "inputType": "radio",
           "tableView": true,
-          "input": true
+          "input": true,
+          "isNew": false
         },
         {
           "inline": true,
@@ -1127,45 +1171,341 @@
             "when": null,
             "eq": ""
           },
-          "inline": false
+          "inline": false,
+          "isNew": false
+        },
+        {
+          "key": "sportingActivitiesTitle",
+          "input": false,
+          "tag": "h2",
+          "attrs": [
+            {
+              "value": "",
+              "attr": ""
+            }
+          ],
+          "className": "",
+          "content": "ACTIVITES SPORTIVES",
+          "type": "htmlelement",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "radio",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football",
+              "value": "veryIntenseActivities"
+            },
+            {
+              "label": "Activités intenses comme un travail physique dur, le ski ou le tennis",
+              "value": "intenseActivities"
+            },
+            {
+              "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging",
+              "value": "moderateActivities"
+            },
+            {
+              "label": "Activités douces comme la marche, le ménage ou le jardinage",
+              "value": "softActivities"
+            },
+            {
+              "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou",
+              "value": "None"
+            }
+          ],
+          "key": "activityHighestLevelPractice",
+          "label": "Quel est le plus haut niveau d’activité que vous pouvez pratiquer régulièrement ?",
+          "inputType": "radio",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "survey",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "Pas difficile",
+              "value": "notHard"
+            },
+            {
+              "label": "Légèrement difficile",
+              "value": "slightlyDifficult"
+            },
+            {
+              "label": "Difficile",
+              "value": "difficult"
+            },
+            {
+              "label": "Très difficile",
+              "value": "veryDifficult"
+            },
+            {
+              "label": "Impossible",
+              "value": "impossible"
+            }
+          ],
+          "questions": [
+            {
+              "label": "Monter les escaliers",
+              "value": "upStairs"
+            },
+            {
+              "label": "Descendre les escaliers",
+              "value": "downStairs"
+            },
+            {
+              "label": "S'agenouiller (poids du corps sur le devant du genou)",
+              "value": "kneeling"
+            },
+            {
+              "label": "S'accroupir",
+              "value": "squat"
+            },
+            {
+              "label": "S'asseoir",
+              "value": "sit"
+            },
+            {
+              "label": "Se lever d’une chaise",
+              "value": "gettingUpChair"
+            },
+            {
+              "label": "Courir en ligne droite",
+              "value": "runStraightLine"
+            },
+            {
+              "label": "Sauter avec réception sur la jambe faible",
+              "value": "JumpingLowLeg"
+            },
+            {
+              "label": "S'arrêter et repartir brusquement (marche, course à pied)",
+              "value": "stoppingStartingAbruptly"
+            }
+          ],
+          "key": "difficultiesInActivitie",
+          "label": "Rencontrez-vous des difficultés pour les activités suivantes ? Cochez la case correspondante",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "key": "operationTiltle",
+          "input": false,
+          "tag": "h2",
+          "attrs": [
+            {
+              "value": "",
+              "attr": ""
+            }
+          ],
+          "className": "",
+          "content": "FONCTIONNEMENT",
+          "type": "htmlelement",
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "htmlelement",
+          "content": "Noter le fonctionnement du genou sur une échelle de 0 à 10 (10 correspondant au fonctionnement optimal, et 0\nétant l’incapacité à accomplir les activités de la vie quotidienne) :",
+          "className": "",
+          "attrs": [
+            {
+              "attr": "",
+              "value": ""
+            }
+          ],
+          "tag": "p",
+          "input": false,
+          "key": "kneeOperationTitle"
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "type": "select",
+          "validate": {
+            "required": true
+          },
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "multiple": false,
+          "template": "<span>{{ item.label }}</span>",
+          "authenticate": false,
+          "filter": "",
+          "refreshOn": "",
+          "defaultValue": "",
+          "valueProperty": "",
+          "dataSrc": "values",
+          "data": {
+            "custom": "",
+            "resource": "",
+            "url": "",
+            "json": "",
+            "values": [
+              {
+                "label": "0 Performance nulle",
+                "value": "0"
+              },
+              {
+                "label": "1",
+                "value": "1"
+              },
+              {
+                "label": "2",
+                "value": "2"
+              },
+              {
+                "label": "3",
+                "value": "3"
+              },
+              {
+                "label": "4",
+                "value": "4"
+              },
+              {
+                "label": "5",
+                "value": "5"
+              },
+              {
+                "label": "6",
+                "value": "6"
+              },
+              {
+                "label": "7",
+                "value": "7"
+              },
+              {
+                "label": "8",
+                "value": "8"
+              },
+              {
+                "label": "9",
+                "value": "9"
+              },
+              {
+                "label": "10 Performance optimale",
+                "value": "10"
+              }
+            ]
+          },
+          "placeholder": "",
+          "key": "kneeOperationBeforeInjury",
+          "label": "Fonction avant l'accident/la blessure du genou :",
+          "tableView": true,
+          "input": true
         },
         {
           "input": true,
           "tableView": true,
-          "inputType": "radio",
-          "label": "Quel est le plus haut niveau d’activité que vous pouvez pratiquer régulièrement ?",
-          "key": "activityHighestLevelPractice",
-          "values": [
-            {
-              "value": "activitesTresIntensesComportantSautsEtRotationsCommeAuBasketOuAuFootball",
-              "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football"
-            },
-            {
-              "value": "activitesIntensesCommeUnTravailPhysiqueDurLeSkiOuLeTennis",
-              "label": "Activités intenses comme un travail physique dur, le ski ou le tennis"
-            },
-            {
-              "value": "activitesModereesCommeUnTravailPhysiqueMoyenLaCourseAPiedOuLeJogging",
-              "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging"
-            },
-            {
-              "value": "activitesDoucesCommeLaMarcheLeMenageOuLeJardinage",
-              "label": "Activités douces comme la marche, le ménage ou le jardinage"
-            },
-            {
-              "value": "None",
-              "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou"
-            }
-          ],
+          "label": "Fonctionnement actuel du genou :",
+          "key": "keenOperationAfterInjury",
+          "placeholder": "",
+          "data": {
+            "values": [
+              {
+                "value": "0",
+                "label": "0 Performance nulle"
+              },
+              {
+                "value": "1",
+                "label": "1"
+              },
+              {
+                "value": "2",
+                "label": "2"
+              },
+              {
+                "value": "3",
+                "label": "3"
+              },
+              {
+                "value": "4",
+                "label": "4"
+              },
+              {
+                "value": "5",
+                "label": "5"
+              },
+              {
+                "value": "6",
+                "label": "6"
+              },
+              {
+                "value": "7",
+                "label": "7"
+              },
+              {
+                "value": "8",
+                "label": "8"
+              },
+              {
+                "value": "9",
+                "label": "9"
+              },
+              {
+                "value": "10",
+                "label": "10 Performance optimale"
+              }
+            ],
+            "json": "",
+            "url": "",
+            "resource": "",
+            "custom": ""
+          },
+          "dataSrc": "values",
+          "valueProperty": "",
           "defaultValue": "",
+          "refreshOn": "",
+          "filter": "",
+          "authenticate": false,
+          "template": "<span>{{ item.label }}</span>",
+          "multiple": false,
           "protected": false,
+          "unique": false,
           "persistent": true,
           "validate": {
-            "required": false,
-            "custom": "",
-            "customPrivate": false
+            "required": true
           },
-          "type": "radio",
+          "type": "select",
           "conditional": {
             "show": "",
             "when": null,
@@ -3038,7 +3378,6 @@
                   "isNew": false
                 },
                 {
-                  "lockKey": true,
                   "conditional": {
                     "eq": "",
                     "when": null,
