@@ -1134,7 +1134,7 @@
           "tableView": true,
           "inputType": "radio",
           "label": "Quel est le plus haut niveau d’activité que vous pouvez pratiquer régulièrement ?",
-          "key": "activityHighestLevelPractice ",
+          "key": "activityHighestLevelPractice",
           "values": [
             {
               "value": "activitesTresIntensesComportantSautsEtRotationsCommeAuBasketOuAuFootball",
