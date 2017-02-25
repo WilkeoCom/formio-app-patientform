@@ -1785,6 +1785,47 @@
       "handler": [
         "before"
       ]
+    },
+    "patientPatientPatientSave": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "patient",
+      "priority": 10,
+      "method": [
+        "create",
+        "update"
+      ],
+      "handler": [
+        "before"
+      ]
+    },
+    "womacIndexFormWomacIndexFormWomacIndexSave": {
+      "name": "save",
+      "title": "Save Submission",    
+      "form": "womacIndex",
+      "deleted": null,
+      "priority": 10,
+      "method": [
+          "create",
+          "update"
+      ],
+      "handler": [
+          "before"
+      ]
+    },
+    "ikdcFormIkdcFormIkdcSave": {
+      "name": "save",
+      "title": "Save Submission",    
+      "form": "ikdc",
+      "deleted": null,
+      "priority": 10,
+      "method": [
+          "create",
+          "update"
+      ],
+      "handler": [
+          "before"
+      ]
     }
   },
   "resources": {
