@@ -752,6 +752,27 @@
       ],
       "components": [
         {
+          "defaultPermission": "",
+          "project": "project",
+          "input": true,
+          "tableView": true,
+          "label": "Patient",
+          "key": "patient",
+          "placeholder": "",
+          "resource": "patient",
+          "defaultValue": "",
+          "template": "<span>{{ item.data }}</span>",
+          "selectFields": "",
+          "searchFields": "",
+          "multiple": false,
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": true
+          },
+          "type": "resource"
+        },
+        {
           "conditional": {
             "eq": "",
             "when": null,
@@ -1553,6 +1574,706 @@
           ]
         }
       ]
+    },
+    "quickDash": {
+      "type": "form",
+      "title": "Quick DASH",
+      "name": "quickDash",
+      "path": "quickdash",
+      "tags": [
+        "patient"
+      ],
+      "components": [
+        {
+          "defaultPermission": "",
+          "project": "project",
+          "input": true,
+          "tableView": true,
+          "label": "Patient",
+          "key": "patient",
+          "placeholder": "",
+          "resource": "patient",
+          "defaultValue": "",
+          "template": "<span>{{ item.data }}</span>",
+          "selectFields": "",
+          "searchFields": "",
+          "multiple": false,
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": true
+          },
+          "type": "resource"
+        },
+        {
+          "key": "instructions",
+          "input": false,
+          "tag": "p",
+          "attrs": [
+            {
+              "value": "",
+              "attr": ""
+            }
+          ],
+          "className": "",
+          "content": "Veuillez évaluer vos possibilités d’effectuer les activités suivantes au cours des 7 derniers jours en entourant le\nchiffre placé sous la réponse appropriée",
+          "type": "htmlelement",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "label": "Quick DASH 1",
+          "key": "quickDash1",
+          "questions": [
+            {
+              "value": "unscrewTight",
+              "label": "Dévisser un couvercle serré ou neuf"
+            },
+            {
+              "value": "heavyHouseholdTasks",
+              "label": "Effectuer des tâches ménagères lourdes (nettoyage des sols ou des murs)"
+            },
+            {
+              "value": "carryBags",
+              "label": "Porter des sacs de provisions ou une mallette"
+            },
+            {
+              "value": "washBack",
+              "label": "Se laver le dos"
+            },
+            {
+              "value": "cutFoodKnife",
+              "label": "Couper la nourriture avec un couteau"
+            },
+            {
+              "value": "activitiesStrengthShocks",
+              "label": "Activités de loisir nécessitant une certaine force ou avec des chocs au niveau de l'épaule du bras ou de la main. (bricolage, tennis, golf, etc..)"
+            }
+          ],
+          "values": [
+            {
+              "value": "1",
+              "label": "Aucune difficulté"
+            },
+            {
+              "value": "2",
+              "label": "Difficulté légère"
+            },
+            {
+              "value": "3",
+              "label": "Difficulté moyenne"
+            },
+            {
+              "value": "4",
+              "label": "Difficulté importante"
+            },
+            {
+              "value": "5",
+              "label": "Impossible"
+            }
+          ],
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": true,
+            "custom": "",
+            "customPrivate": false
+          },
+          "type": "survey",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "label": "Quick DASH 2",
+          "key": "quickDash2",
+          "questions": [
+            {
+              "value": "interferePeople",
+              "label": "Pendant les 7 derniers jours, à quel point votre épaule, votre bras ou votre main vous a-t-elle gêné dans vos relations avec votre famille, vos amis ou vos voisins ? (entourez une seule réponse)"
+            }
+          ],
+          "values": [
+            {
+              "value": "1",
+              "label": "Pas du tout"
+            },
+            {
+              "value": "2",
+              "label": "Légèrement"
+            },
+            {
+              "value": "3",
+              "label": "Moyennement"
+            },
+            {
+              "value": "4",
+              "label": "Beaucoup"
+            },
+            {
+              "value": "5",
+              "label": "Extrêmement"
+            }
+          ],
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": true,
+            "custom": "",
+            "customPrivate": false
+          },
+          "type": "survey",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "tags": [],
+          "type": "survey",
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "values": [
+            {
+              "label": "Pas du tout limité",
+              "value": "1"
+            },
+            {
+              "label": "Légèrement limité",
+              "value": "2"
+            },
+            {
+              "label": "Moyennement limité",
+              "value": "3"
+            },
+            {
+              "label": "Très limité",
+              "value": "4"
+            },
+            {
+              "label": "Incapable",
+              "value": "5"
+            }
+          ],
+          "questions": [
+            {
+              "label": "Avez-vous été limité dans votre travail ou une de vos activités quotidiennes habituelles en raison de problèmes à votre épaule, votre bras ou votre main ?",
+              "value": "limitedWorkDailyActivities"
+            }
+          ],
+          "key": "quickDash3",
+          "label": "Quick DASH 3",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "label": "Quick DASH 4 : Veuillez évaluer la sévérité des symptômes suivants durant les 7 derniers jours. (entourez une réponse sur chacune des lignes)",
+          "key": "quickDash4",
+          "questions": [
+            {
+              "value": "shoulderArmHandPain",
+              "label": "Douleur de l'épaule, du bras ou de la main"
+            },
+            {
+              "value": "shoulderArmHandTingling",
+              "label": "Picotements ou fourmillements douloureux de l'épaule, du bras ou de la main"
+            }
+          ],
+          "values": [
+            {
+              "value": "1",
+              "label": "Aucune"
+            },
+            {
+              "value": "2",
+              "label": "Légère"
+            },
+            {
+              "value": "3",
+              "label": "Moyenne"
+            },
+            {
+              "value": "4",
+              "label": "Importante"
+            },
+            {
+              "value": "5",
+              "label": "Extrême"
+            }
+          ],
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": true,
+            "custom": "",
+            "customPrivate": false
+          },
+          "type": "survey",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "isNew": false,
+          "input": true,
+          "tableView": true,
+          "label": "Quick DASH 5",
+          "key": "quickDash5",
+          "questions": [
+            {
+              "value": "sleepDisrupted",
+              "label": "Pendant les 7 derniers jours, votre sommeil a-t-il été perturbé par une douleur de votre épaule, de votre bras ou de votre main ? (entourez une seule réponse)"
+            }
+          ],
+          "values": [
+            {
+              "value": "1",
+              "label": "Pas du tout perturbé"
+            },
+            {
+              "value": "2",
+              "label": "Un peu perturbé"
+            },
+            {
+              "value": "3",
+              "label": "Moyennement perturbé"
+            },
+            {
+              "value": "4",
+              "label": "Très perturbé"
+            },
+            {
+              "value": "5",
+              "label": "Tellement perturbé que je ne peux pas dormir"
+            }
+          ],
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "validate": {
+            "required": true,
+            "custom": "",
+            "customPrivate": false
+          },
+          "type": "survey",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          }
+        },
+        {
+          "key": "professionalModule",
+          "input": false,
+          "title": "MODULE PROFESSIONNEL (OPTIONNEL)",
+          "theme": "default",
+          "type": "panel",
+          "tags": [],
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "components": [
+            {
+              "key": "professionalModuleInstruction",
+              "input": false,
+              "tag": "p",
+              "attrs": [
+                {
+                  "value": "",
+                  "attr": ""
+                }
+              ],
+              "className": "",
+              "content": "Les questions suivantes concernent la gêne occasionnée par votre épaule, votre bras ou votre main <b>au cours de votre travail (y\ncompris les travaux ménagers s’il s’agit de votre activité principale).</b>",
+              "type": "htmlelement",
+              "tags": [],
+              "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+              }
+            },
+            {
+              "input": true,
+              "tableView": true,
+              "inputType": "text",
+              "inputMask": "",
+              "label": "Précisez la nature de votre travail/métier :",
+              "key": "jobNature",
+              "placeholder": "",
+              "prefix": "",
+              "suffix": "",
+              "multiple": false,
+              "defaultValue": "",
+              "protected": false,
+              "unique": false,
+              "persistent": true,
+              "validate": {
+                "required": false,
+                "minLength": "",
+                "maxLength": "",
+                "pattern": "",
+                "custom": "",
+                "customPrivate": false
+              },
+              "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+              },
+              "type": "textfield",
+              "tags": []
+            },
+            {
+              "input": true,
+              "inputType": "checkbox",
+              "tableView": true,
+              "hideLabel": true,
+              "label": "Je ne travaille pas (Vous pouvez sauter cette partie du questionnaire)",
+              "key": "notWork",
+              "defaultValue": false,
+              "protected": false,
+              "persistent": true,
+              "validate": {
+                "required": false
+              },
+              "type": "checkbox",
+              "tags": [],
+              "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+              }
+            },
+            {
+              "key": "professionalModuleInstruction2",
+              "input": false,
+              "tag": "p",
+              "attrs": [
+                {
+                  "value": "",
+                  "attr": ""
+                }
+              ],
+              "className": "",
+              "content": "<b>Entourez la réponse qui décrit le plus précisément vos possibilités durant les 7 derniers jours.</b>",
+              "type": "htmlelement",
+              "tags": [],
+              "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+              }
+            },
+            {
+              "input": true,
+              "tableView": true,
+              "label": "Avez-vous eu des difficultés :",
+              "key": "professionalDifficulties",
+              "questions": [
+                {
+                  "value": "workUsualTechnique",
+                  "label": "Pour travailler en utilisant votre technique habituelle ?"
+                },
+                {
+                  "value": "workUsualBecausePain",
+                  "label": "Pour travailler comme d'habitude à cause de la douleur de votre épaule, de votre bras ou de votre main ?"
+                },
+                {
+                  "value": "workAsWant",
+                  "label": "Pour travailler aussi bien que vous le souhaitez ?"
+                },
+                {
+                  "value": "usualTimeWork",
+                  "label": "Pour passer le temps habituellement consacré à votre travail ?"
+                }
+              ],
+              "values": [
+                {
+                  "value": "1",
+                  "label": "Aucune difficulté"
+                },
+                {
+                  "value": "2",
+                  "label": "Difficulté légère"
+                },
+                {
+                  "value": "3",
+                  "label": "Difficulté moyenne"
+                },
+                {
+                  "value": "4",
+                  "label": "Difficulté importante"
+                },
+                {
+                  "value": "5",
+                  "label": "Impossible"
+                }
+              ],
+              "defaultValue": "",
+              "protected": false,
+              "persistent": true,
+              "validate": {
+                "required": false,
+                "custom": "",
+                "customPrivate": false
+              },
+              "type": "survey",
+              "tags": [],
+              "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+              }
+            }
+          ]
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "tags": [],
+          "type": "panel",
+          "theme": "default",
+          "title": "MODULE SPORTS/ACTIVITES ARTISTIQUES (OPTIONNEL)",
+          "input": false,
+          "key": "sportModule",
+          "isNew": false,
+          "components": [
+            {
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "tags": [],
+              "type": "htmlelement",
+              "content": "Les questions suivantes concernent la gêne occasionnée par votre épaule, votre bras ou votre main <b>lorsque vous jouez d'un\ninstrument ou que vous pratiquez un sport ou les deux</b>. Si vous pratiquez plusieurs sports ou plusieurs instruments ( ou les\ndeux), vous êtes priés de répondre en fonction de l'activité qui est la plus importante pour vous.",
+              "className": "",
+              "attrs": [
+                {
+                  "attr": "",
+                  "value": ""
+                }
+              ],
+              "tag": "p",
+              "input": false,
+              "key": "sportModuleInstruction"
+            },
+            {
+              "tags": [],
+              "type": "textfield",
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "validate": {
+                "customPrivate": false,
+                "custom": "",
+                "pattern": "",
+                "maxLength": "",
+                "minLength": "",
+                "required": false
+              },
+              "persistent": true,
+              "unique": false,
+              "protected": false,
+              "defaultValue": "",
+              "multiple": false,
+              "suffix": "",
+              "prefix": "",
+              "placeholder": "",
+              "key": "sportInstrumentImportant",
+              "label": "Indiquez le sport ou l'instrument qui est le plus important pour vous :",
+              "inputMask": "",
+              "inputType": "text",
+              "tableView": true,
+              "input": true
+            },
+            {
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "tags": [],
+              "type": "checkbox",
+              "validate": {
+                "required": false
+              },
+              "persistent": true,
+              "protected": false,
+              "defaultValue": false,
+              "key": "notPracticeSportInstrument",
+              "label": "Je ne pratique aucun sport ni aucun instrument. (Vous pouvez sauter cette partie du questionnaire)",
+              "hideLabel": true,
+              "tableView": true,
+              "inputType": "checkbox",
+              "input": true
+            },
+            {
+              "isNew": false,
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "tags": [],
+              "type": "htmlelement",
+              "content": "<b>Entourez 1 seule réponse par ligne, considérant vos possibilités durant les 7 derniers jours.</b>",
+              "className": "",
+              "attrs": [
+                {
+                  "attr": "",
+                  "value": ""
+                }
+              ],
+              "tag": "p",
+              "input": false,
+              "key": "sportModuleInstruction2"
+            },
+            {
+              "input": true,
+              "tableView": true,
+              "label": "Avez-vous eu des difficultés :",
+              "key": "sportDifficulties",
+              "questions": [
+                {
+                  "value": "practiceSportInstrumentUsualTechnique",
+                  "label": "Pour pratiquer votre sport ou jouer de votre instrument avec votre technique habituelle ?"
+                },
+                {
+                  "value": "practiceSportInstrumentBecausePain",
+                  "label": "Pour pratiquer votre sport ou jouer de votre instrument à cause des douleurs de votre épaule, de votre bras ou de votre main ?"
+                },
+                {
+                  "value": "practiceSportInstrumentAsWant",
+                  "label": "Pour pratiquer votre sport ou jouer de votre instrument aussi bien que vous le souhaitez ?"
+                },
+                {
+                  "value": "usualTimePracticingSportInstrumentAsWant",
+                  "label": "Pour passer le temps habituel à pratiquer votre sport ou jouer de e instrument ?"
+                }
+              ],
+              "values": [
+                {
+                  "value": "1",
+                  "label": "Aucune difficulté"
+                },
+                {
+                  "value": "2",
+                  "label": "Difficulté légère"
+                },
+                {
+                  "value": "3",
+                  "label": "Difficulté moyenne"
+                },
+                {
+                  "value": "4",
+                  "label": "Difficulté importante"
+                },
+                {
+                  "value": "5",
+                  "label": "Impossible"
+                }
+              ],
+              "defaultValue": "",
+              "protected": false,
+              "persistent": true,
+              "validate": {
+                "required": false,
+                "custom": "",
+                "customPrivate": false
+              },
+              "type": "survey",
+              "tags": [],
+              "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+              }
+            }
+          ]
+        },
+        {
+          "input": true,
+          "label": "Submit",
+          "tableView": false,
+          "key": "submit",
+          "size": "md",
+          "leftIcon": "",
+          "rightIcon": "",
+          "block": false,
+          "action": "submit",
+          "disableOnInvalid": false,
+          "theme": "primary",
+          "type": "button"
+        }
+      ],
+      "submissionAccess": [
+        {
+          "type": "create_own",
+          "roles": []
+        },
+        {
+          "type": "read_own",
+          "roles": []
+        },
+        {
+          "type": "update_own",
+          "roles": []
+        },
+        {
+          "type": "delete_own",
+          "roles": []
+        }
+      ],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator"
+          ]
+        }
+      ]
     }
   },
   "actions": {
@@ -1801,30 +2522,44 @@
     },
     "womacIndexFormWomacIndexFormWomacIndexSave": {
       "name": "save",
-      "title": "Save Submission",    
+      "title": "Save Submission",
       "form": "womacIndex",
       "deleted": null,
       "priority": 10,
       "method": [
-          "create",
-          "update"
+        "create",
+        "update"
       ],
       "handler": [
-          "before"
+        "before"
       ]
     },
     "ikdcFormIkdcFormIkdcSave": {
       "name": "save",
-      "title": "Save Submission",    
+      "title": "Save Submission",
       "form": "ikdc",
       "deleted": null,
       "priority": 10,
       "method": [
-          "create",
-          "update"
+        "create",
+        "update"
       ],
       "handler": [
-          "before"
+        "before"
+      ]
+    },
+    "quickDashFormQuickDashFormQuickDashSave": {
+      "name": "save",
+      "title": "Save Submission",
+      "form": "quickDash",
+      "deleted": null,
+      "priority": 10,
+      "method": [
+        "create",
+        "update"
+      ],
+      "handler": [
+        "before"
       ]
     }
   },
