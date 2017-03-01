@@ -655,11 +655,11 @@
           "key": "stiffnessArea",
           "questions": [
             {
-              "value": "lorsqueVousVousLevezLeMatin",
+              "value": "lorsqueLevezMatin",
               "label": "1. Lorsque vous vous levez le matin ?"
             },
             {
-              "value": "lorsqueVousBougezApresVousEtreAssisCoucheOuReposeDurantLaJournee",
+              "value": "lorsqueBougezApresRepos",
               "label": "2. Lorsque vous bougez après vous être assis, couché ou reposé durant la journée ?"
             }
           ],
@@ -699,6 +699,23 @@
             "when": null,
             "eq": ""
           }
+        },
+        {
+          "calculateValue": "value = 0;\nfor (var prop in data['womacPain']) {\n  value += parseInt(data['womacPain'][prop], 10);\n}\nfor (var prop in data['functionArea']) {\n  value += parseInt(data['functionArea'][prop], 10);\n}\nfor (var prop in data['stiffnessArea']) {\n  value += parseInt(data['stiffnessArea'][prop], 10);\n}",
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "tags": [],
+          "type": "hidden",
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "label": "Score",
+          "key": "score",
+          "tableView": true,
+          "input": true
         },
         {
           "input": true,
@@ -845,23 +862,23 @@
           "values": [
             {
               "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football",
-              "value": "veryIntenseActivity"
+              "value": "5"
             },
             {
               "label": "Activités intenses comme un travail physique dur, le ski ou le tennis",
-              "value": "intenseActivity"
+              "value": "4"
             },
             {
               "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging",
-              "value": "moderateActivity"
+              "value": "3"
             },
             {
               "label": "Activités douces comme la marche, le ménage ou le jardinage",
-              "value": "softActivities"
+              "value": "2"
             },
             {
               "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou",
-              "value": "noActivities"
+              "value": "1"
             }
           ],
           "key": "activityLevelWithoutSuffering",
@@ -879,47 +896,47 @@
           "data": {
             "values": [
               {
-                "value": "0",
+                "value": "11",
                 "label": "0 Jamais"
               },
               {
-                "value": "1",
+                "value": "10",
                 "label": "1"
               },
               {
-                "value": "2",
+                "value": "9",
                 "label": "2"
               },
               {
-                "value": "3",
+                "value": "8",
                 "label": "3"
               },
               {
-                "value": "4",
+                "value": "7",
                 "label": "4"
               },
               {
-                "value": "5",
+                "value": "6",
                 "label": "5"
               },
               {
-                "value": "6",
+                "value": "5",
                 "label": "6"
               },
               {
-                "value": "7",
+                "value": "4",
                 "label": "7"
               },
               {
-                "value": "8",
+                "value": "3",
                 "label": "8"
               },
               {
-                "value": "9",
+                "value": "2",
                 "label": "9"
               },
               {
-                "value": "10",
+                "value": "1",
                 "label": "10 Constamment"
               }
             ],
@@ -978,47 +995,47 @@
             "values": [
               {
                 "label": "0 Aucune imaginable douleur",
-                "value": "0"
+                "value": "11"
               },
               {
                 "label": "1",
-                "value": "1"
+                "value": "10"
               },
               {
                 "label": "2",
-                "value": "2"
-              },
-              {
-                "label": "3",
-                "value": "3"
-              },
-              {
-                "label": "4",
-                "value": "4"
-              },
-              {
-                "label": "5",
-                "value": "5"
-              },
-              {
-                "label": "6",
-                "value": "6"
-              },
-              {
-                "label": "7",
-                "value": "7"
-              },
-              {
-                "label": "8",
-                "value": "8"
-              },
-              {
-                "label": "9",
                 "value": "9"
               },
               {
+                "label": "3",
+                "value": "8"
+              },
+              {
+                "label": "4",
+                "value": "7"
+              },
+              {
+                "label": "5",
+                "value": "6"
+              },
+              {
+                "label": "6",
+                "value": "5"
+              },
+              {
+                "label": "7",
+                "value": "4"
+              },
+              {
+                "label": "8",
+                "value": "3"
+              },
+              {
+                "label": "9",
+                "value": "2"
+              },
+              {
                 "label": "10 La pire douleur",
-                "value": "10"
+                "value": "1"
               }
             ]
           },
@@ -1048,23 +1065,23 @@
           "values": [
             {
               "label": "Pas du tout",
-              "value": "none"
+              "value": "5"
             },
             {
               "label": "Un peu",
-              "value": "aLittle"
+              "value": "4"
             },
             {
               "label": "Moyennement",
-              "value": "moderately"
+              "value": "3"
             },
             {
               "label": "Beaucoup",
-              "value": "aLot"
+              "value": "2"
             },
             {
               "label": "Enormément",
-              "value": "verryMuch"
+              "value": "1"
             }
           ],
           "key": "stiffOrSwollen",
@@ -1092,23 +1109,23 @@
           "values": [
             {
               "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football",
-              "value": "veryIntenseActivities"
+              "value": "5"
             },
             {
               "label": "Activités intenses comme un travail physique dur, le ski ou le tennis",
-              "value": "intenseActivities"
+              "value": "4"
             },
             {
               "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging",
-              "value": "moderateActivities"
+              "value": "3"
             },
             {
               "label": "Activités douces comme la marche, le ménage ou le jardinage",
-              "value": "softActivities"
+              "value": "5"
             },
             {
               "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou",
-              "value": "none"
+              "value": "1"
             }
           ],
           "key": "activityLevelWithoutSwelling",
@@ -1137,11 +1154,11 @@
           "values": [
             {
               "label": "Oui",
-              "value": "yes"
+              "value": "1"
             },
             {
               "label": "Non",
-              "value": "no"
+              "value": "2"
             }
           ],
           "key": "hasKneeStuck",
@@ -1158,23 +1175,23 @@
           "key": "activityHighestLevelWithoutHiding",
           "values": [
             {
-              "value": "veryIntenseActivities",
+              "value": "5",
               "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football"
             },
             {
-              "value": "intenseActivities",
+              "value": "4",
               "label": "Activités intenses comme un travail physique dur, le ski ou le tennis"
             },
             {
-              "value": "moderateActivities",
+              "value": "3",
               "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging"
             },
             {
-              "value": "softActivities",
+              "value": "5",
               "label": "Activités douces comme la marche, le ménage ou le jardinage"
             },
             {
-              "value": "None",
+              "value": "1",
               "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou"
             }
           ],
@@ -1232,23 +1249,23 @@
           "values": [
             {
               "label": "Activités très intenses comportant sauts et rotations comme au basket ou au football",
-              "value": "veryIntenseActivities"
+              "value": "5"
             },
             {
               "label": "Activités intenses comme un travail physique dur, le ski ou le tennis",
-              "value": "intenseActivities"
+              "value": "4"
             },
             {
               "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging",
-              "value": "moderateActivities"
+              "value": "3"
             },
             {
               "label": "Activités douces comme la marche, le ménage ou le jardinage",
-              "value": "softActivities"
+              "value": "2"
             },
             {
               "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou",
-              "value": "None"
+              "value": "1"
             }
           ],
           "key": "activityHighestLevelPractice",
@@ -1275,23 +1292,23 @@
           "values": [
             {
               "label": "Pas difficile",
-              "value": "notHard"
+              "value": "5"
             },
             {
               "label": "Légèrement difficile",
-              "value": "slightlyDifficult"
+              "value": "4"
             },
             {
               "label": "Difficile",
-              "value": "difficult"
+              "value": "3"
             },
             {
               "label": "Très difficile",
-              "value": "veryDifficult"
+              "value": "2"
             },
             {
               "label": "Impossible",
-              "value": "impossible"
+              "value": "1"
             }
           ],
           "questions": [
@@ -1408,43 +1425,43 @@
               },
               {
                 "label": "1",
-                "value": "1"
+                "value": "0"
               },
               {
                 "label": "2",
-                "value": "2"
+                "value": "0"
               },
               {
                 "label": "3",
-                "value": "3"
+                "value": "0"
               },
               {
                 "label": "4",
-                "value": "4"
+                "value": "0"
               },
               {
                 "label": "5",
-                "value": "5"
+                "value": "0"
               },
               {
                 "label": "6",
-                "value": "6"
+                "value": "0"
               },
               {
                 "label": "7",
-                "value": "7"
+                "value": "0"
               },
               {
                 "label": "8",
-                "value": "8"
+                "value": "0"
               },
               {
                 "label": "9",
-                "value": "9"
+                "value": "0"
               },
               {
                 "label": "10 Performance optimale",
-                "value": "10"
+                "value": "0"
               }
             ]
           },
@@ -1463,47 +1480,47 @@
           "data": {
             "values": [
               {
-                "value": "0",
+                "value": "1",
                 "label": "0 Performance nulle"
               },
               {
-                "value": "1",
+                "value": "2",
                 "label": "1"
               },
               {
-                "value": "2",
+                "value": "3",
                 "label": "2"
               },
               {
-                "value": "3",
+                "value": "4",
                 "label": "3"
               },
               {
-                "value": "4",
+                "value": "5",
                 "label": "4"
               },
               {
-                "value": "5",
+                "value": "6",
                 "label": "5"
               },
               {
-                "value": "6",
+                "value": "7",
                 "label": "6"
               },
               {
-                "value": "7",
+                "value": "8",
                 "label": "7"
               },
               {
-                "value": "8",
+                "value": "9",
                 "label": "8"
               },
               {
-                "value": "9",
+                "value": "10",
                 "label": "9"
               },
               {
-                "value": "10",
+                "value": "11",
                 "label": "10 Performance optimale"
               }
             ],
@@ -1532,6 +1549,38 @@
             "when": null,
             "eq": ""
           }
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
+          "label": "Score IKDC",
+          "key": "scoreIKDC",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "validate": {
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false
+          },
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "type": "textfield",
+          "tags": [],
+          "calculateValue": "var totalScore = 0;\nvar numberAnswered = 0;\nfor (var prop in data) {\n  if (!isNaN(data[prop]) && data[prop] !== \"\" && prop !== 'scoreIKDC') {\n    totalScore += parseInt(data[prop], 10);\n    numberAnswered++;\n  }\n  else if (typeof data[prop] === 'object') {\n    for (var surveyLine in data[prop]) {\n      totalScore += parseInt(data[prop][surveyLine], 10);\n      numberAnswered++;\n    }\n  }\n}\n\nvalue = ((totalScore - 18) / 87 * 100).toFixed(1);"
         },
         {
           "type": "button",
@@ -1896,6 +1945,59 @@
           }
         },
         {
+          "disabled": true,
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
+          "label": "Score Quick DASH",
+          "key": "scoreQuickDASH",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "validate": {
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false
+          },
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "type": "textfield",
+          "tags": [],
+          "calculateValue": "value = 0;\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['quickDash1'] === 'object') {\n  for (var prop in data['quickDash1']) {\n    totalScore += parseInt(data['quickDash1'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash2'] === 'object') {\n  for (var prop in data['quickDash2']) {\n    totalScore += parseInt(data['quickDash2'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash3'] === 'object') {\n  for (var prop in data['quickDash3']) {\n    totalScore += parseInt(data['quickDash3'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash4'] === 'object') {\n  for (var prop in data['quickDash4']) {\n    totalScore += parseInt(data['quickDash4'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash5'] === 'object') {\n  for (var prop in data['quickDash5']) {\n    totalScore += parseInt(data['quickDash5'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}"
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "tags": [],
+          "type": "htmlelement",
+          "content": "Le score QuickDASH n’est pas valable s’il y a plus d’une réponse manquante.",
+          "className": "",
+          "attrs": [
+            {
+              "attr": "",
+              "value": ""
+            }
+          ],
+          "tag": "p",
+          "input": false,
+          "key": "scoreQuickDASHInstruction"
+        },
+        {
           "key": "professionalModule",
           "input": false,
           "title": "MODULE PROFESSIONNEL (OPTIONNEL)",
@@ -2060,6 +2162,59 @@
                 "when": null,
                 "eq": ""
               }
+            },
+            {
+              "tags": [],
+              "type": "textfield",
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "validate": {
+                "customPrivate": false,
+                "custom": "",
+                "pattern": "",
+                "maxLength": "",
+                "minLength": "",
+                "required": false
+              },
+              "persistent": true,
+              "unique": false,
+              "protected": false,
+              "defaultValue": "",
+              "multiple": false,
+              "suffix": "",
+              "prefix": "",
+              "placeholder": "",
+              "key": "scoreProfessionnelModule",
+              "label": "Score module professionnel",
+              "inputMask": "",
+              "inputType": "text",
+              "tableView": true,
+              "input": true,
+              "calculateValue": "value = 0;\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['professionalDifficulties'] === 'object') {\n  for (var prop in data['professionalDifficulties']) {\n    totalScore += parseInt(data['professionalDifficulties'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}",
+              "disabled": true
+            },
+            {
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "tags": [],
+              "type": "htmlelement",
+              "content": "Le score n’est valable pour les modules optionnels qu’en l’absence de réponse manquante.",
+              "className": "",
+              "attrs": [
+                {
+                  "attr": "",
+                  "value": ""
+                }
+              ],
+              "tag": "p",
+              "input": false,
+              "key": "scoreProfessionalModuleInstruction"
             }
           ]
         },
@@ -2224,6 +2379,59 @@
                 "customPrivate": false
               },
               "type": "survey",
+              "tags": [],
+              "conditional": {
+                "show": "",
+                "when": null,
+                "eq": ""
+              }
+            },
+            {
+              "calculateValue": "value = 0;\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['sportDifficulties'] === 'object') {\n  for (var prop in data['sportDifficulties']) {\n    totalScore += parseInt(data['sportDifficulties'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}",
+              "tags": [],
+              "type": "textfield",
+              "conditional": {
+                "eq": "",
+                "when": null,
+                "show": ""
+              },
+              "validate": {
+                "customPrivate": false,
+                "custom": "",
+                "pattern": "",
+                "maxLength": "",
+                "minLength": "",
+                "required": false
+              },
+              "persistent": true,
+              "unique": false,
+              "protected": false,
+              "defaultValue": "",
+              "multiple": false,
+              "suffix": "",
+              "prefix": "",
+              "placeholder": "",
+              "key": "scoreSportModule",
+              "label": "Score module sport/activités artistiques",
+              "inputMask": "",
+              "inputType": "text",
+              "tableView": true,
+              "input": true,
+              "disabled": true
+            },
+            {
+              "key": "scoreSportModuleInstruction",
+              "input": false,
+              "tag": "p",
+              "attrs": [
+                {
+                  "value": "",
+                  "attr": ""
+                }
+              ],
+              "className": "",
+              "content": "Le score n’est valable pour les modules optionnels qu’en l’absence de réponse manquante.",
+              "type": "htmlelement",
               "tags": [],
               "conditional": {
                 "show": "",
