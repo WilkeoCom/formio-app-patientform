@@ -701,21 +701,37 @@
           }
         },
         {
-          "calculateValue": "value = 0;\nfor (var prop in data['womacPain']) {\n  value += parseInt(data['womacPain'][prop], 10);\n}\nfor (var prop in data['functionArea']) {\n  value += parseInt(data['functionArea'][prop], 10);\n}\nfor (var prop in data['stiffnessArea']) {\n  value += parseInt(data['stiffnessArea'][prop], 10);\n}",
-          "conditional": {
-            "eq": "",
-            "when": null,
-            "show": ""
-          },
-          "tags": [],
-          "type": "hidden",
-          "persistent": true,
-          "unique": false,
-          "protected": false,
+          "disabled": true,
+          "input": true,
+          "tableView": true,
+          "inputType": "text",
+          "inputMask": "",
           "label": "Score",
           "key": "score",
-          "tableView": true,
-          "input": true
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "multiple": false,
+          "defaultValue": "",
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "validate": {
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": "",
+            "customPrivate": false
+          },
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "type": "textfield",
+          "tags": [],
+          "calculateValue": "value = '0';\nvar totalScore = 0;\nfor (var prop in data['womacPain']) {\n  value += parseInt(data['womacPain'][prop], 10);\n}\nfor (var prop in data['functionArea']) {\n  value += parseInt(data['functionArea'][prop], 10);\n}\nfor (var prop in data['stiffnessArea']) {\n  value += parseInt(data['stiffnessArea'][prop], 10);\nvalue = totalScore.toString();\n}"
         },
         {
           "input": true,
@@ -1580,7 +1596,7 @@
           },
           "type": "textfield",
           "tags": [],
-          "calculateValue": "var totalScore = 0;\nvar numberAnswered = 0;\nfor (var prop in data) {\n  if (!isNaN(data[prop]) && data[prop] !== \"\" && prop !== 'scoreIKDC') {\n    totalScore += parseInt(data[prop], 10);\n    numberAnswered++;\n  }\n  else if (typeof data[prop] === 'object') {\n    for (var surveyLine in data[prop]) {\n      totalScore += parseInt(data[prop][surveyLine], 10);\n      numberAnswered++;\n    }\n  }\n}\n\nvalue = ((totalScore - 18) / 87 * 100).toFixed(1);"
+          "calculateValue": "var totalScore = 0;\nvar numberAnswered = 0;\nfor (var prop in data) {\n  if (!isNaN(data[prop]) && data[prop] !== \"\" && prop !== 'scoreIKDC') {\n    totalScore += parseInt(data[prop], 10);\n    numberAnswered++;\n  }\n  else if (typeof data[prop] === 'object' && prop !== 'patient' ) {\n    for (var surveyLine in data[prop]) {\n      totalScore += parseInt(data[prop][surveyLine], 10);\n      numberAnswered++;\n    }\n  }\n}\n\nvalue = ((totalScore - 18) / 87 * 100).toFixed(1);"
         },
         {
           "type": "button",
@@ -1975,7 +1991,7 @@
           },
           "type": "textfield",
           "tags": [],
-          "calculateValue": "value = 0;\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['quickDash1'] === 'object') {\n  for (var prop in data['quickDash1']) {\n    totalScore += parseInt(data['quickDash1'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash2'] === 'object') {\n  for (var prop in data['quickDash2']) {\n    totalScore += parseInt(data['quickDash2'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash3'] === 'object') {\n  for (var prop in data['quickDash3']) {\n    totalScore += parseInt(data['quickDash3'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash4'] === 'object') {\n  for (var prop in data['quickDash4']) {\n    totalScore += parseInt(data['quickDash4'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash5'] === 'object') {\n  for (var prop in data['quickDash5']) {\n    totalScore += parseInt(data['quickDash5'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}"
+          "calculateValue": "value = '0';\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['quickDash1'] === 'object') {\n  for (var prop in data['quickDash1']) {\n    totalScore += parseInt(data['quickDash1'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash2'] === 'object') {\n  for (var prop in data['quickDash2']) {\n    totalScore += parseInt(data['quickDash2'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash3'] === 'object') {\n  for (var prop in data['quickDash3']) {\n    totalScore += parseInt(data['quickDash3'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash4'] === 'object') {\n  for (var prop in data['quickDash4']) {\n    totalScore += parseInt(data['quickDash4'][prop], 10);\n    numberAnswered++;\n  }\n}\nif (typeof data['quickDash5'] === 'object') {\n  for (var prop in data['quickDash5']) {\n    totalScore += parseInt(data['quickDash5'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}"
         },
         {
           "conditional": {
@@ -2193,7 +2209,7 @@
               "inputType": "text",
               "tableView": true,
               "input": true,
-              "calculateValue": "value = 0;\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['professionalDifficulties'] === 'object') {\n  for (var prop in data['professionalDifficulties']) {\n    totalScore += parseInt(data['professionalDifficulties'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}",
+              "calculateValue": "value = '0';\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['professionalDifficulties'] === 'object') {\n  for (var prop in data['professionalDifficulties']) {\n    totalScore += parseInt(data['professionalDifficulties'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}",
               "disabled": true
             },
             {
@@ -2387,7 +2403,7 @@
               }
             },
             {
-              "calculateValue": "value = 0;\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['sportDifficulties'] === 'object') {\n  for (var prop in data['sportDifficulties']) {\n    totalScore += parseInt(data['sportDifficulties'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}",
+              "calculateValue": "value = '0';\nvar totalScore = 0;\nvar numberAnswered = 0;\nif (typeof data['sportDifficulties'] === 'object') {\n  for (var prop in data['sportDifficulties']) {\n    totalScore += parseInt(data['sportDifficulties'][prop], 10);\n    numberAnswered++;\n  }\n}\n\nif (numberAnswered > 0){\n  value = ((totalScore/numberAnswered - 1) * 25).toFixed(1);\n}",
               "tags": [],
               "type": "textfield",
               "conditional": {
