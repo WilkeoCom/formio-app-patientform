@@ -3,10 +3,39 @@ Patient form application using Form.io
 This is an patient form project that integrates into Form.io.
 
 Installation
---------------
-You can easily get this application running by typing the following in your command line.
+=============
+
+- Install Gulp and Bower
+ 
+    ```
+    npm install -g gulp bower
+    ```
+
+- Download this repo locally.
+
+    ```
+    git clone git@github.com:WilkeoCom/formio-app-patientform.git
+    ```
+
+- Install dependencies
+
+    ```
+    bower install
+    npm install
+    ```
+
+- Run the application.
+
+    ```
+    gulp serve
+    ```
+    
+Building
+===============
+You can build this application for deployment using the following command.
 
 ```
-npm install
-gulp serve
+gulp build
 ```
+
+The built application resides within the ***dist*** folder.
