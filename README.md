@@ -20,8 +20,8 @@ Installation
 - Install dependencies
 
     ```
-    bower install
     npm install
+    bower install
     ```
 
 - Run the application.
