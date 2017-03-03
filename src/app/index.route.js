@@ -49,6 +49,16 @@
       tag: 'customer'
     });
 
+  // Register the form provider for the patient.
+    FormioFormsProvider.register('patient', AppConfig.appUrl, {
+      field: [{
+        name: 'patient',
+        stateParam: 'patientId'
+      }],
+      base: 'patient.',
+      tag: 'patient'
+    });
+
     $urlRouterProvider.otherwise('/');
   }
 

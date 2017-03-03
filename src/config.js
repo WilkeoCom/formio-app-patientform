@@ -51,6 +51,10 @@ angular.module('servicetracker').constant('AppConfig', {
     service: {
       form: appUrl + '/service',
       resource: 'ServiceResource'
+    },
+    patient: {
+      form: appUrl + '/patient',
+      resource: 'PatientResource'
     }
   }
 });
