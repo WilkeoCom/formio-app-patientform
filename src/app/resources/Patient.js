@@ -6,5 +6,18 @@ angular.module('servicetracker')
         abstract: 'views/patient/patient.html',
         view: 'views/patient/view.html'
       }
+      /*
+      controllers: {
+        index: ['$scope', function($scope) {
+           $scope.currentResource.gridOptions = {
+              enableFiltering: true,
+              columnDefs: [
+                // default
+                { field: 'firstName'}
+              ]
+          };
+        }]
+      }
+      */
     };
   });

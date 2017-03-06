@@ -731,7 +731,7 @@
           },
           "type": "textfield",
           "tags": [],
-          "calculateValue": "value = '0';\nvar totalScore = 0;\nfor (var prop in data['womacPain']) {\n  value += parseInt(data['womacPain'][prop], 10);\n}\nfor (var prop in data['functionArea']) {\n  value += parseInt(data['functionArea'][prop], 10);\n}\nfor (var prop in data['stiffnessArea']) {\n  value += parseInt(data['stiffnessArea'][prop], 10);\nvalue = totalScore.toString();\n}"
+          "calculateValue": "var totalScore = 0;\nfor (var prop in data['womacPain']) {\n  totalScore += parseInt(data['womacPain'][prop], 10);\n}\nfor (var prop in data['functionArea']) {\n  totalScore += parseInt(data['functionArea'][prop], 10);\n}\nfor (var prop in data['stiffnessArea']) {\n  totalScore += parseInt(data['stiffnessArea'][prop], 10);\n}\nvalue = totalScore.toString();"
         },
         {
           "input": true,
@@ -1137,7 +1137,7 @@
             },
             {
               "label": "Activités douces comme la marche, le ménage ou le jardinage",
-              "value": "5"
+              "value": "2"
             },
             {
               "label": "Aucune des activités ci-dessus ne m’est possible à cause de mon genou",

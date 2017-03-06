@@ -5,8 +5,9 @@
   <li ng-if="isDealer" role="presentation" ng-class="{active: isActive('dealer.customerIndex')}"><a ui-sref="dealer.customerIndex({dealerId: user._id})">Customers</a></li>
   <li ng-if="isDealer" role="presentation" ng-class="{active: isActive('dealer.contractorIndex')}"><a ui-sref="dealer.contractorIndex({dealerId: user._id})">Contractors</a></li>
   <li ng-if="isAdmin" role="presentation" ng-class="{active: isActive('dealerIndex')}"><a ui-sref="dealerIndex()">Dealers</a></li>
+  <li ng-if="isAdmin" role="presentation" ng-class="{active: isActive('patientIndex')}"><a ui-sref="patientIndex()">Patients</a></li>
 </ul>
 <div class="jumbotron bg-info">
-  <h2>Welcome to the Service Tracker Application</h2>
+  <h2>Welcome to the Patient Form Application</h2>
   <p>The following applications highlights how you can create an applicatoin with complex nested resource relationships.</p>
 </div>

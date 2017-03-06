@@ -1,5 +1,5 @@
-var APP_URL = 'https://ehbqlfakdnxjguc.form.io';
-var API_URL = 'https://api.form.io';
+var APP_URL = 'http://localhost:3001';
+var API_URL = 'http://localhost:3001';
 
 // Parse query string
 var query = {};
@@ -51,6 +51,10 @@ angular.module('servicetracker').constant('AppConfig', {
     service: {
       form: appUrl + '/service',
       resource: 'ServiceResource'
+    },
+    patient: {
+      form: appUrl + '/patient',
+      resource: 'PatientResource'
     }
   }
 });
