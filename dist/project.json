@@ -1203,7 +1203,7 @@
               "label": "Activités modérées comme un travail physique moyen, la course à pied ou le jogging"
             },
             {
-              "value": "5",
+              "value": "2",
               "label": "Activités douces comme la marche, le ménage ou le jardinage"
             },
             {
@@ -4353,6 +4353,39 @@
                   "input": true
                 },
                 {
+                  "input": true,
+                  "tableView": true,
+                  "inputType": "radio",
+                  "label": "Sexe",
+                  "key": "gender",
+                  "values": [
+                    {
+                      "value": "woman",
+                      "label": "Femme"
+                    },
+                    {
+                      "value": "man",
+                      "label": "Homme"
+                    }
+                  ],
+                  "defaultValue": "",
+                  "protected": false,
+                  "persistent": true,
+                  "validate": {
+                    "required": true,
+                    "custom": "",
+                    "customPrivate": false
+                  },
+                  "type": "radio",
+                  "conditional": {
+                    "show": "",
+                    "when": null,
+                    "eq": ""
+                  },
+                  "inline": true,
+                  "isNew": false
+                },
+                {
                   "conditional": {
                     "eq": "",
                     "when": null,
@@ -4373,7 +4406,7 @@
                   "key": "email",
                   "label": "Email",
                   "inputType": "email",
-                  "tableView": true,
+                  "tableView": false,
                   "input": true,
                   "isNew": false
                 },
@@ -4399,7 +4432,7 @@
                   "key": "phoneNumber",
                   "label": "Téléphone",
                   "inputMask": "(+99) 9-99-99-99-99",
-                  "tableView": true,
+                  "tableView": false,
                   "input": true,
                   "isNew": false
                 }
@@ -4440,9 +4473,40 @@
                   },
                   "key": "birthdate",
                   "label": "Date de naissance",
-                  "tableView": true,
+                  "tableView": false,
                   "input": true,
                   "isNew": false
+                },
+                {
+                  "disabled": true,
+                  "input": true,
+                  "tableView": true,
+                  "inputType": "number",
+                  "label": "Age",
+                  "key": "age",
+                  "placeholder": "",
+                  "prefix": "",
+                  "suffix": "",
+                  "defaultValue": "",
+                  "protected": false,
+                  "persistent": true,
+                  "validate": {
+                    "custom": "",
+                    "multiple": "",
+                    "integer": "",
+                    "step":"any",
+                    "max": "",
+                    "min": "",
+                    "required":false
+                  },
+                  "conditional": {
+                    "show": "",
+                    "when": null,
+                    "eq": ""
+                  },
+                  "type": "number",
+                  "tags": [],
+                  "calculateValue": "value = 0; console.log(data['birthdate']) if (typeof data['birthdate'] === 'string') { var dateParts = data['birthdate'].split(\"/\"); if (dateParts.length == 3) { console.log(dateParts) var birthday = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]); var ageDifMs = Date.now() - birthday.getTime(); var ageDate = new Date(ageDifMs);  value = Math.abs(ageDate.getFullYear() - 1970); } }"
                 },
                 {
                   "conditional": {
