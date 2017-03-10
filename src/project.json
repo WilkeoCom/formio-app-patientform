@@ -461,9 +461,11 @@
           "placeholder": "",
           "resource": "patient",
           "defaultValue": "",
-          "template": "<span>{{ item.data }}</span>",
+          "template": "<span>{{ item.data.lastName }}, {{ item.data.firstName }}</span>",
           "selectFields": "",
-          "searchFields": "",
+          "searchFields": [
+            "data.lastName__regex"
+          ],
           "multiple": false,
           "protected": false,
           "persistent": true,
@@ -533,12 +535,12 @@
           ],
           "key": "womacPain",
           "label": "Domaine douleur : quelle est l'importance de la douleur ?",
-          "tableView": true,
+          "tableView": false,
           "input": true
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Domaine fonction : quelle est l'importance de la difficulté que vous éprouvez à :",
           "key": "functionArea",
           "questions": [
@@ -650,7 +652,7 @@
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Domaine raideur : Quelle est l'importance de la raideur de votre articulation ?",
           "key": "stiffnessArea",
           "questions": [
@@ -776,10 +778,10 @@
       ]
     },
     "ikdc": {
-      "title": "IKDS",
+      "title": "IKDC",
       "type": "form",
-      "name": "ikds",
-      "path": "ikds",
+      "name": "ikdc",
+      "path": "ikdc",
       "tags": [
         "patient"
       ],
@@ -794,9 +796,11 @@
           "placeholder": "",
           "resource": "patient",
           "defaultValue": "",
-          "template": "<span>{{ item.data }}</span>",
+          "template": "<span>{{ item.data.lastName }}, {{ item.data.firstName }}</span>",
           "selectFields": "",
-          "searchFields": "",
+          "searchFields": [
+            "data.lastName__regex"
+          ],
           "multiple": false,
           "protected": false,
           "persistent": true,
@@ -900,12 +904,12 @@
           "key": "activityLevelWithoutSuffering",
           "label": "Quel est le niveau d’activité le plus important que vous pouvez accomplir sans souffrir du genou ?",
           "inputType": "radio",
-          "tableView": true,
+          "tableView": false,
           "input": true
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Au cours des 4 dernières semaines, ou depuis votre accident ou blessure, combien de fois avez-vous souffert du genou ? Cochez la case correspondante (de 0 à 10) :",
           "key": "howManyTimesSuffered",
           "placeholder": "",
@@ -1058,7 +1062,7 @@
           "placeholder": "",
           "key": "painIntensity",
           "label": "Indiquez l’intensité de la douleur en cochant la case correspondante (de 0 à 10) :",
-          "tableView": true,
+          "tableView": false,
           "input": true,
           "isNew": false
         },
@@ -1103,7 +1107,7 @@
           "key": "stiffOrSwollen",
           "label": "Au cours des 4 dernières semaines, ou depuis l’accident ou blessure, votre genou était-il raide ou gonflé ?",
           "inputType": "radio",
-          "tableView": true,
+          "tableView": false,
           "input": true,
           "isNew": false
         },
@@ -1147,7 +1151,7 @@
           "key": "activityLevelWithoutSwelling",
           "label": "Quel est le plus haut niveau d’activité que vous pouvez accomplir sans que votre genou enfle ?",
           "inputType": "radio",
-          "tableView": true,
+          "tableView": false,
           "input": true,
           "isNew": false
         },
@@ -1180,12 +1184,12 @@
           "key": "hasKneeStuck",
           "label": "Au cours des 4 dernières semaines, ou depuis l’accident ou blessure, votre genou s’est-il bloqué ?",
           "inputType": "radio",
-          "tableView": true,
+          "tableView": false,
           "input": true
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "inputType": "radio",
           "label": "Quel est le plus haut niveau d’activité que vous pouvez accomplir sans que votre genou ne se dérobe ?",
           "key": "activityHighestLevelWithoutHiding",
@@ -1287,7 +1291,7 @@
           "key": "activityHighestLevelPractice",
           "label": "Quel est le plus haut niveau d’activité que vous pouvez pratiquer régulièrement ?",
           "inputType": "radio",
-          "tableView": true,
+          "tableView": false,
           "input": true
         },
         {
@@ -1367,7 +1371,7 @@
           ],
           "key": "difficultiesInActivitie",
           "label": "Rencontrez-vous des difficultés pour les activités suivantes ? Cochez la case correspondante",
-          "tableView": true,
+          "tableView": false,
           "input": true
         },
         {
@@ -1484,12 +1488,12 @@
           "placeholder": "",
           "key": "kneeOperationBeforeInjury",
           "label": "Fonction avant l'accident/la blessure du genou :",
-          "tableView": true,
+          "tableView": false,
           "input": true
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Fonctionnement actuel du genou :",
           "key": "keenOperationAfterInjury",
           "placeholder": "",
@@ -1659,9 +1663,11 @@
           "placeholder": "",
           "resource": "patient",
           "defaultValue": "",
-          "template": "<span>{{ item.data }}</span>",
+          "template": "<span>{{ item.data.lastName }}, {{ item.data.firstName }}</span>",
           "selectFields": "",
-          "searchFields": "",
+          "searchFields": [
+            "data.lastName__regex"
+          ],
           "multiple": false,
           "protected": false,
           "persistent": true,
@@ -1692,7 +1698,7 @@
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Quick DASH 1",
           "key": "quickDash1",
           "questions": [
@@ -1761,7 +1767,7 @@
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Quick DASH 2",
           "key": "quickDash2",
           "questions": [
@@ -1854,12 +1860,12 @@
           ],
           "key": "quickDash3",
           "label": "Quick DASH 3",
-          "tableView": true,
+          "tableView": false,
           "input": true
         },
         {
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Quick DASH 4 : Veuillez évaluer la sévérité des symptômes suivants durant les 7 derniers jours. (entourez une réponse sur chacune des lignes)",
           "key": "quickDash4",
           "questions": [
@@ -1913,7 +1919,7 @@
         {
           "isNew": false,
           "input": true,
-          "tableView": true,
+          "tableView": false,
           "label": "Quick DASH 5",
           "key": "quickDash5",
           "questions": [
@@ -2048,7 +2054,7 @@
             },
             {
               "input": true,
-              "tableView": true,
+              "tableView": false,
               "inputType": "text",
               "inputMask": "",
               "label": "Précisez la nature de votre travail/métier :",
@@ -2080,7 +2086,7 @@
             {
               "input": true,
               "inputType": "checkbox",
-              "tableView": true,
+              "tableView": false,
               "hideLabel": true,
               "label": "Je ne travaille pas (Vous pouvez sauter cette partie du questionnaire)",
               "key": "notWork",
@@ -2120,7 +2126,7 @@
             },
             {
               "input": true,
-              "tableView": true,
+              "tableView": false,
               "label": "Avez-vous eu des difficultés :",
               "key": "professionalDifficulties",
               "questions": [
@@ -2296,7 +2302,7 @@
               "label": "Indiquez le sport ou l'instrument qui est le plus important pour vous :",
               "inputMask": "",
               "inputType": "text",
-              "tableView": true,
+              "tableView": false,
               "input": true
             },
             {
@@ -2316,7 +2322,7 @@
               "key": "notPracticeSportInstrument",
               "label": "Je ne pratique aucun sport ni aucun instrument. (Vous pouvez sauter cette partie du questionnaire)",
               "hideLabel": true,
-              "tableView": true,
+              "tableView": false,
               "inputType": "checkbox",
               "input": true
             },
@@ -2343,7 +2349,7 @@
             },
             {
               "input": true,
-              "tableView": true,
+              "tableView": false,
               "label": "Avez-vous eu des difficultés :",
               "key": "sportDifficulties",
               "questions": [
@@ -4360,11 +4366,11 @@
                   "key": "gender",
                   "values": [
                     {
-                      "value": "woman",
+                      "value": "femme",
                       "label": "Femme"
                     },
                     {
-                      "value": "man",
+                      "value": "homme",
                       "label": "Homme"
                     }
                   ],
