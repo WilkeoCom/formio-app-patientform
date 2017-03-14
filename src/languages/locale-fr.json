@@ -1,0 +1,10 @@
+{
+    "Day": "Jour",
+    "Month": "Mois",
+    "Year": "Année",
+    "Yes": "Oui",
+    "No": "Non",
+    "Are you sure you wish to delete the patient?": "Voulez-vous vraiment supprimer le patient ?",
+    "Patient was deleted.": "Le patient a été supprimé.",
+    "Submissions": "Résultats"
+}

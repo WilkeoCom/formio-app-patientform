@@ -11,6 +11,7 @@
     FormioProvider,
     FormioAuthProvider,
     AppConfig,
+    $translateProvider,
     $locationProvider
   ) {
     $locationProvider.hashPrefix('');
@@ -30,5 +31,13 @@
     toastrConfig.positionClass = 'toast-top-right';
     toastrConfig.preventDuplicates = true;
     toastrConfig.progressBar = true;
+
+    //Tranlation
+    $translateProvider.useStaticFilesLoader({
+      prefix: '/languages/locale-',
+      suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('fr');
+    $translateProvider.useSanitizeValueStrategy('escape');
   }
 })();
