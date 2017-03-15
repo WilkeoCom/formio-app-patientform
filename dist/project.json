@@ -1,6 +1,6 @@
 {
   "title": "Patient Forms",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "description": "L'application des formulaires patient.",
   "preview": {
     "url": "https://formio.github.io/formio-app-servicetracker",
@@ -89,7 +89,7 @@
         },
         {
           "input": true,
-          "label": "Submit",
+          "label": "Envoyer",
           "tableView": false,
           "key": "submit",
           "size": "md",
@@ -219,7 +219,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "Envoyer",
           "input": true
         }
       ],
@@ -370,7 +370,7 @@
         },
         {
           "input": true,
-          "label": "Submit",
+          "label": "Envoyer",
           "tableView": false,
           "key": "submit",
           "size": "md",
@@ -737,7 +737,7 @@
         },
         {
           "input": true,
-          "label": "Submit",
+          "label": "Envoyer",
           "tableView": false,
           "key": "submit",
           "size": "md",
@@ -1613,7 +1613,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "Envoyer",
           "input": true
         }
       ],
@@ -2465,7 +2465,7 @@
         },
         {
           "input": true,
-          "label": "Submit",
+          "label": "Envoyer",
           "tableView": false,
           "key": "submit",
           "size": "md",
@@ -2880,7 +2880,7 @@
         },
         {
           "input": true,
-          "label": "Submit",
+          "label": "Envoyer",
           "tableView": false,
           "key": "submit",
           "size": "md",
@@ -3114,7 +3114,7 @@
           "input": true,
           "tableView": false,
           "type": "button",
-          "label": "Submit",
+          "label": "Envoyer",
           "rightIcon": "",
           "key": "submit",
           "action": "submit",
@@ -3315,7 +3315,7 @@
           "input": true
         },
         {
-          "label": "Submit",
+          "label": "Envoyer",
           "rightIcon": "",
           "size": "md",
           "disableOnInvalid": true,
@@ -3488,7 +3488,7 @@
           "theme": "primary",
           "type": "button",
           "key": "submit",
-          "label": "Submit",
+          "label": "Envoyer",
           "rightIcon": "",
           "leftIcon": "",
           "size": "md",
@@ -3656,7 +3656,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "Envoyer",
           "input": true
         }
       ],
@@ -3878,7 +3878,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "Envoyer",
           "input": true
         }
       ],
@@ -4041,7 +4041,7 @@
         },
         {
           "input": true,
-          "label": "Submit",
+          "label": "Envoyer",
           "tableView": false,
           "key": "submit",
           "size": "md",
@@ -4205,7 +4205,7 @@
         },
         {
           "input": true,
-          "label": "Submit",
+          "label": "Envoyer",
           "tableView": false,
           "key": "submit",
           "size": "md",
@@ -4594,7 +4594,7 @@
           "size": "md",
           "key": "submit",
           "tableView": false,
-          "label": "Submit",
+          "label": "Envoyer",
           "input": true
         }
       ],

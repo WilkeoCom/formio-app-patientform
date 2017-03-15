@@ -12,7 +12,7 @@ var apiUrl = query.apiUrl || API_URL;
 angular.module('servicetracker').constant('AppConfig', {
   appUrl: appUrl,
   apiUrl: apiUrl,
-  company: query.company || 'Service Tracker',
+  company: query.company || 'Patient Forms',
   icon: query.icon || 'assets/images/logo.png',
   forms: {
     userForm: appUrl + '/user',

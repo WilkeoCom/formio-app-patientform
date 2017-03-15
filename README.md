@@ -1,6 +1,6 @@
-Patient form application using Form.io
+Patient forms application using Form.io
 ---------------------------------
-This is an patient form project that integrates into Form.io.
+This is an patient forms project that integrates into Form.io.
 
 Installation
 =============

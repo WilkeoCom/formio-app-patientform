@@ -7,7 +7,10 @@ angular.module('servicetracker')
         view: 'views/patient/view.html'
       },
       controllers: {
-        index: ['$scope', function ($scope) {
+        index: ['$scope', 'i18nService', function ($scope, i18nService) {
+          //Translate ui-grid
+          i18nService.setCurrentLang('fr');
+          
           var template = '<formio-grid-cell class="ui-grid-cell-contents" data="COL_FIELD" component="col.colDef.component"></formio-grid-cell>';
           $scope.currentResource.gridOptions = {
             columnDefs: [

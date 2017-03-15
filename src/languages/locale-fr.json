@@ -5,6 +5,8 @@
     "Yes": "Oui",
     "No": "Non",
     "Are you sure you wish to delete the patient?": "Voulez-vous vraiment supprimer le patient ?",
+    "Are you sure you wish to delete the submission?": "Voulez-vous vraiment supprimer la soumission ?",
     "Patient was deleted.": "Le patient a été supprimé.",
-    "Submissions": "Résultats"
+    "Submissions": "Soumissions",
+    "View": "Voir"
 }

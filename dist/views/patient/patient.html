@@ -1,7 +1,7 @@
 <ul class="nav nav-tabs" ng-if="isAdmin">
-  <li role="presentation" ng-class="{active: isActive('patient.view')}"><a ui-sref="patient.view()">View</a></li>
-  <li role="presentation" ng-class="{active: isActive('patient.form')}"><a ui-sref="patient.formIndex()">Forms</a></li>
-  <li role="presentation" ng-if="isAdmin" ng-class="{active: isActive('patient.edit')}"><a ui-sref="patient.edit()">Edit</a></li>
-  <li role="presentation" ng-if="isAdmin" ng-class="{active: isActive('patient.delete')}"><a ui-sref="patient.delete()">Delete</a></li>
+  <li role="presentation" ng-class="{active: isActive('patient.view')}"><a ui-sref="patient.view()">Voir</a></li>
+  <li role="presentation" ng-class="{active: isActive('patient.form')}"><a ui-sref="patient.formIndex()">Formulaires</a></li>
+  <li role="presentation" ng-if="isAdmin" ng-class="{active: isActive('patient.edit')}"><a ui-sref="patient.edit()">Éditer</a></li>
+  <li role="presentation" ng-if="isAdmin" ng-class="{active: isActive('patient.delete')}"><a ui-sref="patient.delete()">Supprimer</a></li>
 </ul>
 <div ui-view></div>
