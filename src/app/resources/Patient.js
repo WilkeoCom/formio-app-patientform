@@ -3,6 +3,7 @@ angular.module('servicetracker')
     return {
       $get: function() { return null; },
       templates: {
+        index: 'views/patient/index.html',
         abstract: 'views/patient/patient.html',
         view: 'views/patient/view.html'
       },

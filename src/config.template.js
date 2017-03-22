@@ -22,7 +22,8 @@ angular.module('servicetracker').constant('AppConfig', {
   forms: {
     userForm: appUrl + '/user',
     userLoginForm: appUrl + '/user/login',
-    appointmentForm: appUrl + '/appointment'
+    appointmentForm: appUrl + '/appointment',
+    patientForm: appUrl + '/patient'
   },
   roles: [
     'Contractor',
@@ -56,6 +57,10 @@ angular.module('servicetracker').constant('AppConfig', {
     service: {
       form: appUrl + '/service',
       resource: 'ServiceResource'
+    },
+    patient: {
+      form: appUrl + '/patient',
+      resource: 'PatientResource'
     }
   }
 });
