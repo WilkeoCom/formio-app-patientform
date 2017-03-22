@@ -8,5 +8,11 @@
     "Are you sure you wish to delete the submission?": "Voulez-vous vraiment supprimer la soumission ?",
     "Patient was deleted.": "Le patient a été supprimé.",
     "Submissions": "Soumissions",
-    "View": "Voir"
+    "View": "Voir",
+    "Delete": "Supprimer",
+    "Edit": "Editer",
+    "Email": "E-mail",
+    "Password": "Mot de passe",
+    "Submit": "Envoyer",    
+    "New Patient": "Nouveau patient"
 }

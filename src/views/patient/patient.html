@@ -1,3 +1,4 @@
+<h2><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{patient.resource.data.firstName}} {{patient.resource.data.lastName}}</h2>
 <ul class="nav nav-tabs" ng-if="isAdmin">
   <li role="presentation" ng-class="{active: isActive('patient.view')}"><a ui-sref="patient.view()">Voir</a></li>
   <li role="presentation" ng-class="{active: isActive('patient.form')}"><a ui-sref="patient.formIndex()">Formulaires</a></li>
