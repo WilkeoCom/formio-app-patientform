@@ -8,8 +8,8 @@
   <li ng-if="isAdmin" role="presentation" ng-class="{active: isActive('patientIndex')}"><a ui-sref="patientIndex()">Patients</a></li>
 </ul>
 <div class="jumbotron bg-info">
-  <h2>Welcome to the Patient Forms Application</h2>
-  <p>The following applications highlights how you can create an applicatoin with complex nested resource relationships.</p>
+  <h2>Bienvenue sur l'application des Formulaires Patient</h2>
+  <p>L'application suivante vous permet de gérer les formulaires de vos patient de manière digital.</p>
 </div>
 <formio-grid src="patientForm"></formio-grid><br />
 <a ui-sref="{{ baseName }}Create()" class="btn btn-primary" ng-if="isReady && hasAccess('patient', 'create_own')"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nouveau Patient</a>
