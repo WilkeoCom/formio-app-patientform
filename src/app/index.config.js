@@ -24,6 +24,7 @@
     FormioAuthProvider.setStates('auth.login', 'home');
     FormioAuthProvider.setForceAuth(true);
     FormioAuthProvider.register('login', 'user');
+    FormioAuthProvider.register('register', 'user');
 
     // Set options third-party lib
     toastrConfig.allowHtml = true;

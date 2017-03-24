@@ -17,42 +17,13 @@ angular.module('servicetracker').constant('AppConfig', {
   forms: {
     userForm: appUrl + '/user',
     userLoginForm: appUrl + '/user/login',
-    appointmentForm: appUrl + '/appointment',
+    userRegisterForm: appUrl + '/user/register',
     patientForm: appUrl + '/patient'
   },
   roles: [
-    'Contractor',
-    'Dealer'
+    'Authenticated'
   ],
   resources: {
-    dealer: {
-      form: appUrl + '/dealer',
-      resource: 'DealerResource'
-    },
-    customer: {
-      form: appUrl + '/customer',
-      resource: 'CustomerResource'
-    },
-    contractor: {
-      form: appUrl + '/contractor',
-      resource: 'ContractorResource'
-    },
-    appointment: {
-      form: appUrl + '/appointment',
-      resource: 'AppointmentResource'
-    },
-    timeclock: {
-      form: appUrl + '/timeclock',
-      resource: 'TimeClockResource'
-    },
-    equipment: {
-      form: appUrl + '/equipment',
-      resource: 'EquipmentResource'
-    },
-    service: {
-      form: appUrl + '/service',
-      resource: 'ServiceResource'
-    },
     patient: {
       form: appUrl + '/patient',
       resource: 'PatientResource'

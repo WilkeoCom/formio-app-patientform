@@ -3085,24 +3085,29 @@
         {
           "type": "create_own",
           "roles": [
+            "administrator",
             "authenticated"
+            
           ]
         },
         {
           "type": "read_own",
           "roles": [
+            "administrator",
             "authenticated"
           ]
         },
         {
           "type": "update_own",
           "roles": [
+            "administrator",
             "authenticated"
           ]
         },
         {
           "type": "delete_own",
           "roles": [
+            "administrator",
             "authenticated"
           ]
         }

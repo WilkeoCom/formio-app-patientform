@@ -15,5 +15,7 @@
     "Password": "Mot de passe",
     "Submit": "Envoyer",
     "Email must be unique.": "L'e-mail doit être unique.",
-    "Please fix the following errors before submitting.": "Veuillez corriger les erreurs suivantes avant de soumettre."
+    "Please fix the following errors before submitting.": "Veuillez corriger les erreurs suivantes avant de soumettre.",
+    "Invalid user": "Utilisateur invalide",
+    "Incorrect password": "Mot de passe incorrect"
 }
