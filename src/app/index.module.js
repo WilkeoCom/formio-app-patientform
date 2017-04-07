@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   angular
-    .module('servicetracker', [
+    .module('patientforms', [
       'ngSanitize',
       'ngAria',
       'ui.router',

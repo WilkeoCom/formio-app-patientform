@@ -1,4 +1,4 @@
-angular.module('servicetracker')
+angular.module('patientforms')
   .provider('PatientResource', function() {
     return {
       $get: function() { return null; },

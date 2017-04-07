@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('servicetracker')
+    .module('patientforms')
     .run(runBlock);
 
   /** @ngInject */

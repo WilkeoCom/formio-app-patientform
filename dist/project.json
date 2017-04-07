@@ -4,7 +4,7 @@
   "description": "L'application des formulaires patient.",
   "name": "patientforms",
   "preview": {
-    "url": "https://formio.github.io/formio-app-servicetracker",
+    "url": "https://github.com/WilkeoCom/formio-app-patientform",
     "repo": "https://github.com/WilkeoCom/formio-app-patientform"
   },
   "roles": {

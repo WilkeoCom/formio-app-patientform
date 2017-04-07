@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('servicetracker')
+    .module('patientforms')
     .constant('moment', moment);
 
 })();
