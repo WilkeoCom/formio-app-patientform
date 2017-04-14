@@ -17,5 +17,17 @@
     "Email must be unique.": "L'e-mail doit être unique.",
     "Please fix the following errors before submitting.": "Veuillez corriger les erreurs suivantes avant de soumettre.",
     "Invalid user": "Utilisateur invalide",
-    "Incorrect password": "Mot de passe incorrect"
+    "Incorrect password": "Mot de passe incorrect",
+    "January": "Janvier",
+    "February": "Février",
+    "March": "Mars",
+    "April": "Avril",
+    "May": "Mai",
+    "June": "Juin",
+    "July": "Juillet",
+    "August": "Août",
+    "September": "Septembre",
+    "October": "Octobre",
+    "November": "Novembre",
+    "December": "Décembre"
 }
