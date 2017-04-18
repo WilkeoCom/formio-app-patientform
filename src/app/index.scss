@@ -18,3 +18,17 @@ $brand-danger:          #FF0039;
 .nav-tabs {
   margin-bottom: 10px;
 }
+
+.ui-select-dropdown {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+  margin-top: -1px;
+}
+
+.ui-select-dropdown .ui-select-choices-content {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
