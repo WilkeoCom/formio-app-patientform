@@ -1885,7 +1885,7 @@
             {
               "key": "professionalModuleInstruction2",
               "input": false,
-              "tag": "p",
+              "tag": "b",
               "attrs": [
                 {
                   "value": "",
@@ -1893,7 +1893,7 @@
                 }
               ],
               "className": "",
-              "content": "<b>Entourez la réponse qui décrit le plus précisément vos possibilités durant les 7 derniers jours.</b>",
+              "content": "Entourez la réponse qui décrit le plus précisément vos possibilités durant les 7 derniers jours.",
               "type": "htmlelement",
               "tags": [],
               "conditional": {
@@ -2113,7 +2113,7 @@
               },
               "tags": [],
               "type": "htmlelement",
-              "content": "<b>Entourez 1 seule réponse par ligne, considérant vos possibilités durant les 7 derniers jours.</b>",
+              "content": "Entourez 1 seule réponse par ligne, considérant vos possibilités durant les 7 derniers jours.",
               "className": "",
               "attrs": [
                 {
@@ -2121,7 +2121,7 @@
                   "value": ""
                 }
               ],
-              "tag": "p",
+              "tag": "b",
               "input": false,
               "key": "sportModuleInstruction2"
             },
