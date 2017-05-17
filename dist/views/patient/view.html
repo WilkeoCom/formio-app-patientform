@@ -4,5 +4,6 @@
   </div>
   <div class="panel-body">
     <formio-submission submission="patient.resource" form="patient.form"></formio-submission>
+    <formio-grid ng-if="isAdmin" src="currentForm.url" query="submissionQuery" columns="submissionColumns"></formio-grid>
   </div>
 </div>

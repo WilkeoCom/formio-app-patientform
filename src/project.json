@@ -2282,6 +2282,295 @@
           ]
         }
       ]
+    },
+    "kneeIntervention": {
+      "type": "form",
+      "title": "Intervention genou",
+      "name": "kneeIntervention",
+      "path": "kneeintervention",
+      "components": [
+        {
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "tags": [],
+          "type": "resource",
+          "defaultPermission": "",
+          "validate": {
+            "required": true
+          },
+          "persistent": true,
+          "protected": false,
+          "multiple": false,
+          "searchFields": [
+            "data.lastName__regex"
+          ],
+          "selectFields": "",
+          "template": "<span>{{ item.data.lastName }}, {{ item.data.firstName }}</span>",
+          "defaultValue": "",
+          "project": "project",
+          "resource": "patient",
+          "placeholder": "",
+          "key": "patient",
+          "label": "Patient",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "label": "IRM du genou",
+          "key": "kneeIrm",
+          "placeholder": "",
+          "data": {
+            "custom": "",
+            "resource": "",
+            "url": "",
+            "json": "",
+            "values": [
+              {
+                "label": "Droit",
+                "value": "droit"
+              },
+              {
+                "label": "Gauche",
+                "value": "gauche"
+              }
+            ]
+          },
+          "dataSrc": "values",
+          "valueProperty": "",
+          "defaultValue": "",
+          "refreshOn": "",
+          "filter": "",
+          "authenticate": false,
+          "template": "<span>{{ item.label }}</span>",
+          "multiple": false,
+          "protected": false,
+          "unique": false,
+          "persistent": true,
+          "clearOnHide": true,
+          "validate": {
+            "required": false
+          },
+          "type": "select",
+          "tags": [],
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "lockKey": true
+        },
+        {
+          "input": true,
+          "tableView": true,
+          "inputType": "number",
+          "label": "Quantité de moelle prélèvé",
+          "key": "marrowRemovedQuantity",
+          "placeholder": "",
+          "prefix": "",
+          "suffix": "",
+          "defaultValue": "",
+          "protected": false,
+          "persistent": true,
+          "clearOnHide": true,
+          "validate": {
+            "custom": "",
+            "multiple": "",
+            "integer": "",
+            "step": "any",
+            "max": "",
+            "min": "",
+            "required": false
+          },
+          "type": "number",
+          "tags": [],
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "lockKey": true,
+          "customConditional": ""
+        },
+        {
+          "isNew": false,
+          "lockKey": true,
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "tags": [],
+          "type": "number",
+          "validate": {
+            "required": false,
+            "min": "",
+            "max": "",
+            "step": "any",
+            "integer": "",
+            "multiple": "",
+            "custom": ""
+          },
+          "clearOnHide": true,
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "",
+          "key": "mononuclearCellsQuantity",
+          "label": "Quantité de cellules mononucléées",
+          "inputType": "number",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "lockKey": true,
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "tags": [],
+          "type": "number",
+          "validate": {
+            "required": false,
+            "min": "",
+            "max": "",
+            "step": "any",
+            "integer": "",
+            "multiple": "",
+            "custom": ""
+          },
+          "clearOnHide": true,
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "",
+          "key": "cartilageVolume",
+          "label": "Volume de cartilage",
+          "inputType": "number",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "rows": [],
+          "isNew": false,
+          "lockKey": true,
+          "conditional": {
+            "show": "",
+            "when": null,
+            "eq": ""
+          },
+          "tags": [],
+          "type": "textarea",
+          "validate": {
+            "required": false,
+            "minLength": "",
+            "maxLength": "",
+            "pattern": "",
+            "custom": ""
+          },
+          "clearOnHide": true,
+          "wysiwyg": false,
+          "persistent": true,
+          "protected": false,
+          "defaultValue": "",
+          "multiple": false,
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "",
+          "key": "note",
+          "label": "Remarque",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "input": true,
+          "label": "Envoyer",
+          "tableView": false,
+          "key": "submit",
+          "size": "md",
+          "leftIcon": "",
+          "rightIcon": "",
+          "block": false,
+          "action": "submit",
+          "disableOnInvalid": false,
+          "theme": "primary",
+          "type": "button",
+          "tags": [],
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          }
+        }
+      ],
+      "submissionAccess": [
+        {
+          "type": "create_all",
+          "roles": []
+        },
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "update_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "delete_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "create_own",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "read_own",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "update_own",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "delete_own",
+          "roles": [
+            "administrator"
+          ]
+        }
+      ],
+      "access": [
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator"
+          ]
+        }
+      ],
+      "tags": [
+        "patient"
+      ]
     }
   },
   "actions": {
@@ -2451,6 +2740,20 @@
       "name": "save",
       "title": "Save Submission",
       "form": "quickDash",
+      "deleted": null,
+      "priority": 10,
+      "method": [
+        "create",
+        "update"
+      ],
+      "handler": [
+        "before"
+      ]
+    },
+    "kneeInterventionSave": {
+      "name": "save",
+      "title": "Save Submission",
+      "form": "kneeIntervention",
       "deleted": null,
       "priority": 10,
       "method": [
@@ -2888,7 +3191,7 @@
                   "placeholder": "",
                   "key": "phoneNumber",
                   "label": "Téléphone",
-                  "inputMask": "(+99) 9-99-99-99-99",
+                  "inputMask": "",
                   "tableView": false,
                   "input": true,
                   "isNew": false
@@ -3067,19 +3370,22 @@
         {
           "type": "read_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         },
         {
           "type": "update_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         },
         {
           "type": "delete_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         },
         {
@@ -3087,7 +3393,6 @@
           "roles": [
             "administrator",
             "authenticated"
-            
           ]
         },
         {

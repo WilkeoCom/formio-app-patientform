@@ -1,8 +1,8 @@
 <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{patient.resource.data.firstName}} {{patient.resource.data.lastName}}</h2>
-<ul class="nav nav-tabs" ng-if="isAdmin">
+<ul class="nav nav-tabs" ng-if="isAdmin || isAuthenticated">
   <li role="presentation" ng-class="{active: isActive('patient.view')}"><a ui-sref="patient.view()">Voir</a></li>
   <li role="presentation" ng-class="{active: isActive('patient.form')}"><a ui-sref="patient.formIndex()">Formulaires</a></li>
-  <li role="presentation" ng-if="isAdmin" ng-class="{active: isActive('patient.edit')}"><a ui-sref="patient.edit()">Éditer</a></li>
+  <li role="presentation" ng-class="{active: isActive('patient.edit')}"><a ui-sref="patient.edit()">Éditer</a></li>
   <li role="presentation" ng-if="isAdmin" ng-class="{active: isActive('patient.delete')}"><a ui-sref="patient.delete()">Supprimer</a></li>
 </ul>
 <div ui-view></div>

@@ -49,6 +49,16 @@ angular.module('patientforms')
               }
             ]
           };
+        }],
+        view: ['$scope', '$stateParams', 'i18nService', function ($scope, $stateParams, i18nService) {
+          //Translate ui-grid
+          i18nService.setCurrentLang('fr');
+          // /form?name__regex=/^user/i
+          $scope.submissionQuery = {};
+          $scope.submissionQuery['data.patient._id'] = $stateParams['patientId'];
+          $scope.currentForm = {
+            url: "http://localhost:3001/form/59086769c69c8a1a00e7e682"
+          };
         }]
       }
     };
