@@ -530,27 +530,63 @@
       ],
       "submissionAccess": [
         {
-          "type": "create_own",
+          "type": "create_all",
           "roles": []
+        },
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
+        },
+        {
+          "type": "update_all",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
+        },
+        {
+          "type": "delete_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "create_own",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "read_own",
-          "roles": []
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "update_own",
-          "roles": []
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "delete_own",
-          "roles": []
+          "roles": [
+            "administrator"
+          ]
         }
       ],
       "access": [
         {
           "type": "read_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         }
       ]
@@ -1397,27 +1433,63 @@
       ],
       "submissionAccess": [
         {
-          "type": "create_own",
+          "type": "create_all",
           "roles": []
+        },
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
+        },
+        {
+          "type": "update_all",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
+        },
+        {
+          "type": "delete_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "create_own",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "read_own",
-          "roles": []
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "update_own",
-          "roles": []
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "delete_own",
-          "roles": []
+          "roles": [
+            "administrator"
+          ]
         }
       ],
       "access": [
         {
           "type": "read_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         }
       ]
@@ -2258,27 +2330,63 @@
       ],
       "submissionAccess": [
         {
-          "type": "create_own",
+          "type": "create_all",
           "roles": []
+        },
+        {
+          "type": "read_all",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
+        },
+        {
+          "type": "update_all",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
+        },
+        {
+          "type": "delete_all",
+          "roles": [
+            "administrator"
+          ]
+        },
+        {
+          "type": "create_own",
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "read_own",
-          "roles": []
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "update_own",
-          "roles": []
+          "roles": [
+            "administrator",
+            "authenticated"
+          ]
         },
         {
           "type": "delete_own",
-          "roles": []
+          "roles": [
+            "administrator"
+          ]
         }
       ],
       "access": [
         {
           "type": "read_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         }
       ]
@@ -2288,6 +2396,9 @@
       "title": "Intervention genou",
       "name": "kneeIntervention",
       "path": "kneeintervention",
+      "tags": [
+        "patient"
+      ],
       "components": [
         {
           "conditional": {
@@ -2567,9 +2678,6 @@
             "administrator"
           ]
         }
-      ],
-      "tags": [
-        "patient"
       ]
     }
   },
