@@ -550,7 +550,8 @@
         {
           "type": "delete_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         },
         {
@@ -577,7 +578,8 @@
         {
           "type": "delete_own",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         }
       ],
@@ -1453,7 +1455,8 @@
         {
           "type": "delete_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         },
         {
@@ -1480,7 +1483,8 @@
         {
           "type": "delete_own",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         }
       ],
@@ -2350,7 +2354,8 @@
         {
           "type": "delete_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         },
         {
@@ -2377,7 +2382,8 @@
         {
           "type": "delete_own",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         }
       ],
@@ -2631,7 +2637,8 @@
         {
           "type": "read_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         },
         {
@@ -2675,7 +2682,8 @@
         {
           "type": "read_all",
           "roles": [
-            "administrator"
+            "administrator",
+            "authenticated"
           ]
         }
       ]

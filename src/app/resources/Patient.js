@@ -57,7 +57,8 @@ angular.module('patientforms')
           $scope.submissionQuery = {};
           $scope.submissionQuery['data.patient._id'] = $stateParams['patientId'];
           $scope.currentForm = {
-            url: "http://localhost:3001/form/59086769c69c8a1a00e7e682"
+            _id: "591d796f0b667925b89f3887",
+            url: "http://localhost:3001/form/591d796f0b667925b89f3887"
           };
         }]
       }
