@@ -3323,35 +3323,41 @@
                     "show": ""
                   },
                   "tags": [],
-                  "type": "day",
+                  "type": "datetime",
                   "validate": {
-                    "custom": ""
+                    "custom": "",
+                    "required": true                    
                   },
+                  "clearOnHide": true,
                   "persistent": true,
                   "protected": false,
-                  "dayFirst": true,
-                  "fields": {
-                    "year": {
-                      "required": true,
-                      "placeholder": "année",
-                      "type": "text"
-                    },
-                    "month": {
-                      "required": true,
-                      "placeholder": "mois",
-                      "type": "select"
-                    },
-                    "day": {
-                      "required": true,
-                      "placeholder": "jour",
-                      "type": "text"
-                    }
+                  "datePicker": {
+                    "datepickerMode": "day",
+                    "yearRange": "20",
+                    "maxMode": "year",
+                    "minMode": "day",
+                    "initDate": "",
+                    "startingDay": 0,
+                    "showWeeks": true
+                  },
+                  "timePicker": {
+                    "arrowkeys": true,
+                    "mousewheel": true,
+                    "readonlyInput": false,
+                    "showMeridian": false,
+                    "minuteStep": 1,
+                    "hourStep": 1
                   },
                   "key": "birthdate",
                   "label": "Date de naissance",
+                  "placeholder": "",
+                  "format": "dd/MM/yyyy", 
+                  "enableDate": true,
+                  "enableTime": false,
+                  "defaultDate": "",
+                  "datepickerMode": "day",
                   "tableView": false,
-                  "input": true,
-                  "isNew": false
+                  "input": true
                 },
                 {
                   "disabled": true,

@@ -4,7 +4,7 @@
   </div>
   <div class="panel-body">
     <formio-submission submission="patient.resource" form="patient.form"></formio-submission>
-    <formio-grid src="currentForm.url" query="submissionQuery" columns="submissionColumns"></formio-grid>
+    <formio-grid ng-if="kneeInterventionForm.url" src="kneeInterventionForm.url" query="submissionQuery" columns="submissionColumns"></formio-grid>
     <a ui-sref="patient.form.view({formId: currentForm._id})" class="btn btn-primary" ng-if="isReady && hasAccess('kneeIntervention', 'create_own')">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nouvelle intervention genou  
     </a>

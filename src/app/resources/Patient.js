@@ -50,16 +50,30 @@ angular.module('patientforms')
             ]
           };
         }],
-        view: ['$scope', '$stateParams', 'i18nService', function ($scope, $stateParams, i18nService) {
+        view: ['$scope', '$stateParams', 'Formio', 'i18nService', 
+        function ($scope, $stateParams, Formio, i18nService) {
           //Translate ui-grid
           i18nService.setCurrentLang('fr');
-          // /form?name__regex=/^user/i
+ 
+          $scope.kneeInterventionForm = null;
+          $scope.formsSrc = Formio.getProjectUrl() + '/form';
+
+          var params = {
+            type: 'form',
+            limit: 1,
+            tags: 'patient',
+            name__regex: '/^kneeIntervention/i'
+          };
+
+          (new Formio($scope.formsSrc)).loadForms({params: params}).then(function (forms) {
+            if (forms && forms.length > 0) {
+              $scope.kneeInterventionForm = forms[0];
+              $scope.kneeInterventionForm.url = $scope.formsSrc + "/" + $scope.kneeInterventionForm._id;
+            }
+          });
+
           $scope.submissionQuery = {};
           $scope.submissionQuery['data.patient._id'] = $stateParams['patientId'];
-          $scope.currentForm = {
-            _id: "591d796f0b667925b89f3887",
-            url: "http://localhost:3001/form/591d796f0b667925b89f3887"
-          };
         }]
       }
     };
