@@ -3388,7 +3388,7 @@
                   },
                   "type": "number",
                   "tags": [],
-                  "calculateValue": "value = 0; if (typeof data['birthdate'] === 'string') { var dateParts = data['birthdate'].split(\"/\"); if (dateParts.length == 3) { var birthday = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]); var ageDifMs = Date.now() - birthday.getTime(); var ageDate = new Date(ageDifMs);  value = Math.abs(ageDate.getFullYear() - 1970); } }"
+                  "calculateValue": "value = 0; if (typeof data['birthdate'] === 'object') { var birthday = data['birthdate']; var ageDifMs = Date.now() - birthday.getTime(); var ageDate = new Date(ageDifMs);  value = Math.abs(ageDate.getFullYear() - 1970); }"
                 },
                 {
                   "conditional": {
