@@ -10,6 +10,7 @@
     "angular-bootstrap": "^2.5.0",
     "angular-toastr": "^2.1.1",
     "angular-translate-loader-static-files": "^2.15.1",
+    "angular-locale_fr-fr":"https://raw.githubusercontent.com/angular/bower-angular-i18n/master/angular-locale_fr-fr.js",
     "moment": "^2.18.1",
     "animate.css": "^3.5.2",
     "angular": "^1.6.4",
