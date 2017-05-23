@@ -9,6 +9,14 @@ angular.module('patientforms')
         view: 'views/patient/view.html'
       },
       controllers: {
+        create: ['$scope', 'uiDatetimePickerConfig', function ($scope, uiDatetimePickerConfig) {
+          uiDatetimePickerConfig.buttonBar.now.text = 'Maintenant';
+          uiDatetimePickerConfig.buttonBar.today.text = 'Aujourd\'hui';
+          uiDatetimePickerConfig.buttonBar.clear.text = 'Effacer';
+          uiDatetimePickerConfig.buttonBar.date.text = 'Date';
+          uiDatetimePickerConfig.buttonBar.time.text = 'Heure';
+          uiDatetimePickerConfig.buttonBar.close.text = 'Fermer';
+        }],
         index: ['$scope', 'i18nService', function ($scope, i18nService) {
           //Translate ui-grid
           i18nService.setCurrentLang('fr');
