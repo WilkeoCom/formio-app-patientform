@@ -3329,15 +3329,17 @@
                     "required": true                    
                   },
                   "clearOnHide": true,
+                  "hidden": false,
                   "persistent": true,
                   "protected": false,
                   "datePicker": {
                     "datepickerMode": "day",
-                    "yearRange": "20",
+                    "yearRows": 4,
+                    "yearColumns": 5,
                     "maxMode": "year",
                     "minMode": "day",
                     "initDate": "",
-                    "startingDay": 0,
+                    "startingDay": "1",
                     "showWeeks": true
                   },
                   "timePicker": {
