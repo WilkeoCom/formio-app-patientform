@@ -2578,7 +2578,6 @@
         },
         {
           "rows": [],
-          "isNew": false,
           "lockKey": true,
           "conditional": {
             "show": "",
@@ -3464,6 +3463,37 @@
                   "key": "weight",
                   "label": "Poids",
                   "inputType": "number",
+                  "tableView": true,
+                  "input": true
+                },
+                {
+                  "lockKey": true,
+                  "conditional": {
+                    "show": "",
+                    "when": null,
+                    "eq": ""
+                  },
+                  "tags": [],
+                  "type": "textarea",
+                  "validate": {
+                    "required": false,
+                    "minLength": "",
+                    "maxLength": "",
+                    "pattern": "",
+                    "custom": ""
+                  },
+                  "clearOnHide": true,
+                  "wysiwyg": false,
+                  "persistent": true,
+                  "protected": false,
+                  "defaultValue": "",
+                  "multiple": false,
+                  "rows": 3,
+                  "suffix": "",
+                  "prefix": "",
+                  "placeholder": "",
+                  "key": "note",
+                  "label": "Remarque",
                   "tableView": true,
                   "input": true
                 }

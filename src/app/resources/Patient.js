@@ -38,22 +38,26 @@ angular.module('patientforms')
               {
                 displayName: 'Sexe',
                 enableFiltering: false,
-                field: 'data.gender'
+                field: 'data.gender',
+                maxWidth: 100
               },
               {
                 displayName: 'Age',
                 enableFiltering: false,
-                field: 'data.age'
+                field: 'data.age',
+                maxWidth: 100
               },
               {
                 displayName: 'Taille',
                 enableFiltering: false,
-                field: 'data.height'
+                field: 'data.height',
+                maxWidth: 100
               },
               {
                 displayName: 'Poids',
                 enableFiltering: false,
-                field: 'data.weight'
+                field: 'data.weight',
+                maxWidth: 100
               },
               {
                 displayName: 'WOMAC',
@@ -66,9 +70,10 @@ angular.module('patientforms')
                 field: 'data.scoreIKDC'
               },
               {
-                displayName: 'Quick DASH',
+                displayName: 'Remarque',
                 enableFiltering: false,
-                field: 'data.scoreQuickDASH'
+                field: 'data.note',
+                minWidth: 300
               }
             ],
             customAction: function (grid) {
