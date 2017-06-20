@@ -28,36 +28,38 @@ angular.module('patientforms')
                 cellTemplate: '<a style="cursor:pointer;" ng-click="grid.appScope.buttonClick(\'rowView\', row)">' + template + '</a>',
                 displayName: 'Prénom',
                 enableFiltering: true,
-                field: 'data.firstName'
+                field: 'data.firstName',
+                minWidth: 100
               },
               {
                 displayName: 'Nom',
                 enableFiltering: true,
-                field: 'data.lastName'
+                field: 'data.lastName',
+                minWidth: 120
               },
               {
                 displayName: 'Sexe',
                 enableFiltering: false,
                 field: 'data.gender',
-                maxWidth: 100
+                maxWidth: 70
               },
               {
                 displayName: 'Age',
                 enableFiltering: false,
                 field: 'data.age',
-                maxWidth: 100
+                maxWidth: 75
               },
               {
                 displayName: 'Taille',
                 enableFiltering: false,
                 field: 'data.height',
-                maxWidth: 100
+                maxWidth: 75
               },
               {
                 displayName: 'Poids',
                 enableFiltering: false,
                 field: 'data.weight',
-                maxWidth: 100
+                maxWidth: 75
               },
               {
                 displayName: 'WOMAC',
@@ -73,7 +75,7 @@ angular.module('patientforms')
                 displayName: 'Remarque',
                 enableFiltering: false,
                 field: 'data.note',
-                minWidth: 300
+                minWidth: 250
               }
             ],
             customAction: function (grid) {

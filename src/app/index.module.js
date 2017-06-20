@@ -8,7 +8,6 @@
       'ui.bootstrap',
       'toastr',
       'pascalprecht.translate',
-      'ngMap',
       'formio',
       'ngFormioHelper'
     ]);
