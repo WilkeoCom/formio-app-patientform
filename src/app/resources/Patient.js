@@ -80,7 +80,7 @@ angular.module('patientforms')
             ],
             customAction: function (grid) {
               return new Promise(function (resolve) {
-
+                 
                 var getPatientLineSubmissions = function (submissions, line) {
                   return submissions.filter(function (submission) {
                     return submission.data && submission.data.patient._id === line._id;
@@ -115,6 +115,7 @@ angular.module('patientforms')
                     var patientIds = grid.gridOptionsDef.data.map(function (patientLine) { return patientLine._id; });
                     var submissionQuery = {};
                     submissionQuery['data.patient._id__in'] = patientIds.join(',');
+                    submissionQuery['limit'] = grid.query.limit;
 
                     var promesses = [];
                     angular.forEach(forms, function (form) {
